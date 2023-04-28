@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from './style.module.css'
 
 const navigation = {
     browser: [
-        { name: 'MKT Place', href: '#' },
+        { name: 'Home', href: '/' },
+        { name: 'CHRONUS Sports Atletas', href: '#' },
+        { name: 'CHRONUS Sports Clubes', href: '/club' },
+        { name: 'CHRONUS Sports Education', href: '#' },
+        { name: 'CHRONUS Sports Marketplace Primary', href: '#' },
+        { name: 'CHRONUS Sports Marketplace Secondary', href: '#' },
+        { name: 'CHRONUS Sports Social', href: '#' },
     ],
     institutional: [
         { name: 'Sobre', href: '#' },
@@ -80,16 +87,16 @@ const navigation = {
     ],
 }
 
-const Footer = () => {
+const FooterClub = () => {
 
     return <>
-        <footer className="bg-[#0D102D]" aria-labelledby="footer-heading">
+        <footer className={`${styles.footer} bg-[#0D102D]`} aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32 flex flex-col">
+            <div className={`${styles.container} mx-auto px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-16 flex flex-col`}>
                 <div className="flex xl:grid-cols-3 xl:gap-8 sm:justify-between flex-wrap">
-                    <div className="space-y-8 max-w-[420px]">
+                    <div className="space-y-8 max-w-[369px]">
                         <Image
                             className="w-[164px] h-auto"
                             src='/assets/images/logo.svg'
@@ -100,7 +107,7 @@ const Footer = () => {
                         <p className="not-italic font-normal text-base leading-[150%] text-[#A1A2B3]">
                             CHRONUS Sports é a sua chance de possuir, vender e negociar NFT’s colecionáveis digitais oficiais dos melhores atletas profissionais do mundo.
                         </p>
-                        <div className="flex space-x-6">
+                        <div className="flex space-x-4">
                             {navigation.social.map((item) => (
                                 <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
                                     <span className="sr-only">{item.name}</span>
@@ -111,12 +118,12 @@ const Footer = () => {
                     </div>
                     <div className="mt-16  xl:mt-0 flex flex-wrap flex-col sm:flex-row w-max">
                         <div className="">
-                            <div className="mt-10 md:mt-0  min-w-[170px] w-[100%]">
+                            <div className="mt-10 md:mt-0  min-w-[170px] w-[100%] ">
                                 <h3 className="not-italic font-normal text-base leading-[150%] uppercase text-[#00E4FF]">NAVEGAR</h3>
                                 <ul role="list" className="mt-6 space-y-4">
                                     {navigation.browser.map((item) => (
                                         <li key={item.name}>
-                                            <a href={item.href} className="not-italic font-normal text-base leading-[150%] flex items-center text-[#A1A2B3]">
+                                            <a href={item.href} className={item.href != '#' ? "not-italic font-normal text-base leading-[150%] flex items-center text-[#A1A2B3]" : "not-italic font-normal text-base leading-[150%] flex items-center text-[#333950] pointer-events-none"}>
                                                 {item.name}
                                             </a>
                                         </li>
@@ -155,7 +162,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 flex sm:justify-between flex-wrap justify-center">
+                <div className="mt-16  pt-8 sm:mt-20 lg:mt-24 flex sm:justify-between flex-wrap justify-center">
                     <p className="text-xs leading-5 text-gray-400">© 2022 CHRONUS Sports - Powered By <span className="text-[#00e4ff]">Mooh!Tech</span></p>
                     <p className="text-xs leading-5 text-gray-400">
                         <Link target="_blank" href="https://www.moohtech.com/chronus/sports/termsofuse/pt-BR/termsofuse_CHRONUS_Sports_PT-br.pdf" className="pr-4 py-0 hover:text-[#00e4ff]">Termos e Condições</Link>
@@ -167,4 +174,4 @@ const Footer = () => {
     </>
 }
 
-export default Footer;
+export default FooterClub;

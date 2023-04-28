@@ -17,7 +17,7 @@ const HomePage = () => {
 
     return <>
         <div className="bg-[#0D0035]">
-            <Header />
+            <Header/>
             <Hero />
             <About />
             <Launch />

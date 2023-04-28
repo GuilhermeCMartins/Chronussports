@@ -594,7 +594,7 @@ const Step2 = ({ data }: { data: any }) => {
 
                                     </button>
                                 </div>
-                            </form>
+                            </form> display: flex;
 
 
 
