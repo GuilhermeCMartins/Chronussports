@@ -1,8 +1,27 @@
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import styles from './styles.module.css'
+
+
+interface Anchor {
+  href: string;
+  label: string;
+}
 
 export default function Solutions() {
+
+  const items: Anchor[] = [
+    { href: '/', label: 'CHRONUS Sports Atletas' },
+    { href: '/club', label: 'CHRONUS Sports Clubes' },
+    { href: '/', label: 'CHRONUS Sports Education' },
+    { href: '/', label: 'CHRONUS Sports Marketplace Primary' },
+    { href: '/', label: 'CHRONUS Sports Marketplace Secondary' },
+    { href: '/', label: 'CHRONUS Sports Social' },
+    { href: '/', label: 'CHRONUS Sports VR' },
+    { href: '/', label: 'CHRONUS Academy' },
+  ];
+
   return (
     <div className="top-16 text-center items-center">
       <Menu as="div" className="relative inline-block text-left">
@@ -24,67 +43,22 @@ export default function Solutions() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className={`${styles.menu} absolute right-0 mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}>
             <div className="px-1 py-1 ">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    Edit
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    Duplicate
-                  </button>
-                )}
-              </Menu.Item>
-            </div>
-            <div className="px-1 py-1">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    Archive
-                  </button>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    Move
-                  </button>
-                )}
-              </Menu.Item>
-            </div>
-            <div className="px-1 py-1">
-              <Menu.Item>
-                {({ active }) => (
-                  <button
-                    className={`${
-                      active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    Delete
-                  </button>
-                )}
-              </Menu.Item>
+                {items.map((item) =>(
+                  <Menu.Item key={item.href} as={Fragment}>
+                  {({ active }) => (
+                    <a
+                      href={item.href}
+                      className={`${
+                        item.href == "/" ? styles.inactive : styles.active
+                      } group flex w-full items-center rounded-md px-2 py-2 text-base text-sm`}
+                    >
+                      {item.label}
+                    </a>
+                   )}
+                </Menu.Item>      
+                ))}            
             </div>
           </Menu.Items>
         </Transition>
