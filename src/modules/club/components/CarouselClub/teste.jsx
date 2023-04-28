@@ -1,43 +1,69 @@
-import SwiperCore, { Lazy, Swiper } from 'swiper';
-import 'swiper/swiper-bundle.min.css';
+import React from 'react';
+import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination } from 'swiper';
+import Image from 'next/image'
 
-SwiperCore.use([Lazy]);
+import styles from './carousel.module.css'
+
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 export default function Teste(){
-    const swiper = new Swiper(".card-slider-4-columns", {
-        modules: [Navigation, Lazy],
-        speed: 400,
-        spaceBetween: 30,
-        slidesPerView: 1,
-        breakpoints: {
-          560: {
-            slidesPerView: 2,
-            slidesPerGroup: 2
-          },
-          768: {
-            slidesPerView: 3,
-            slidesPerGroup: 3
-          },
-          1024: {
-            slidesPerView: 3,
-            slidesPerGroup: 3
-          },
-          1200: {
-            slidesPerView: 4,
-            slidesPerGroup: 4
-          }
-        },
-        preloadImages: false,
-        lazy: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
-      })
-
+      
     return (
-        <>
-        <div className='.card-slider-4-columns'></div>
-        </>
+        <section className={styles.section}>
+           <div className={styles.container}>
+            <div className={styles.slider}>
+            <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                loop={true}
+                slidesPerView={'7'}
+                coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+                }}
+                pagination={{ el: styles.swiper_pagination, clickable: true }}
+                navigation={{
+                nextEl: styles.swiper_button_next,
+                prevEl: styles.swiper_button_prev,
+                clickable: true,
+                }}
+                modules={[EffectCoverflow, Pagination, Navigation]}
+                className={styles.swiper_container}
+            >
+                <SwiperSlide className={styles.slide}>
+                    <Image src='/assets/images/union.svg' width={200} height={215} alt='Brasão'></Image>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image src='/assets/images/union.svg' width={200} height={215} alt='Brasão'></Image>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image src='/assets/images/union.svg' width={200} height={215} alt='Brasão'></Image>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image src='/assets/images/union.svg' width={200} height={215} alt='Brasão'></Image>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image src='/assets/images/union.svg' width={200} height={215} alt='Brasão'></Image>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image src='/assets/images/union.svg' width={200} height={215} alt='Brasão'></Image>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image src='/assets/images/union.svg' width={200} height={215} alt='Brasão'></Image>
+                </SwiperSlide>
+        
+
+                </Swiper>
+                </div>
+            </div>
+        </section>
       );
 }

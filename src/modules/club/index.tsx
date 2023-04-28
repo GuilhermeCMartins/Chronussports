@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
-import CarouselClub from "./components/CarouselClub";
 import Footer from "../portal/components/footer";
+import Teste from './components/CarouselClub/teste'
 
 export default function ClubPage(){
     return <>
         <div>
             <Header></Header>
-            <CarouselClub></CarouselClub>
+            <Teste></Teste>
             <Footer></Footer>
         </div>
     </>
