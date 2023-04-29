@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import SwiperCore, { Navigation, EffectCoverflow } from 'swiper';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperRef, SwiperSlide, useSwiper } from 'swiper/react';
 import Image from 'next/image'
 
 import styles from './carousel.module.css'
 
 import 'swiper/swiper-bundle.css';
-import Dropdown from '../Dropdown/Dropdown';
+import Dropdown from '../Dropdown';
 
 type Images = {
     items: {
@@ -19,35 +19,40 @@ type Images = {
     }[];
   };
 
-SwiperCore.use([EffectCoverflow, Navigation]);
+SwiperCore.use([EffectCoverflow]);
 
 const nacionalidade = [
-  { id: 1, label: 'Brasileiro(a)' },
-  { id: 2, label: 'Alemão' },
-  { id: 3, label: 'Espanhol' },
-  { id: 4, label: 'Italiano(a)' },
+  { id: 1, label: 'Qual a sua nacionalidade?' },
+  { id: 2, label: 'Brasileiro(a)' },
+  { id: 3, label: 'Alemão' },
+  { id: 4, label: 'Espanhol' },
+  { id: 5, label: 'Italiano(a)' },
 ];
 
 const modalidade = [
-  { id: 1, label: 'Futebol' },
-  { id: 2, label: 'Basquete' },
-  { id: 3, label: 'Vôlei' },
-  { id: 4, label: 'Futsal' },
+  { id: 1, label: 'Qual a modalidade?' },
+  { id: 2, label: 'Futebol' },
+  { id: 3, label: 'Basquete' },
+  { id: 4, label: 'Vôlei' },
+  { id: 5, label: 'Futsal' },
 ];
 
 const regiao = [
-  { id: 1, label: 'Norte' },
-  { id: 2, label: 'Nordeste' },
-  { id: 3, label: 'Sul' },
-  { id: 4, label: 'Sudeste' },
+  { id: 1, label: 'De qual Região?' },
+  { id: 2, label: 'Norte' },
+  { id: 3, label: 'Nordeste' },
+  { id: 4, label: 'Sul' },
+  { id: 5, label: 'Sudeste' },
 ];
 
 const ranking = [
-  { id: 1, label: 'Nacional' },
-  { id: 2, label: 'Internacional' },
+  { id: 1, label: 'Ranking' },
+  { id: 2, label: 'Nacional' },
+  { id: 3, label: 'Internacional' },
 ];
 
-export default function CarouselClub({items} : Images){      
+export default function CarouselClub({items} : Images){    
+
     return (
         <section className={styles.section}>
           
@@ -63,6 +68,10 @@ export default function CarouselClub({items} : Images){
             <div className={styles.slider}>
             <Swiper
                 breakpoints = {{
+                  2000:{
+                    slidesPerView: 7,
+                    slidesPerGroup: 1,
+                  },
                   1600:{
                     slidesPerView: 7,
                     slidesPerGroup: 1,
@@ -94,9 +103,13 @@ export default function CarouselClub({items} : Images){
                 modifier: 2.5,
                 slideShadows: false,
                 }}
-                navigation={{ enabled: true}}
                 modules={[EffectCoverflow, Navigation]}
                 className={styles.swiper_container}
+                initialSlide={4}
+                navigation = {{ 
+                  prevEl: `.${styles['custom-swiper-button-prev']}`,
+                  nextEl: `.${styles['custom-swiper-button-next']}`,
+                }}
             >
                 {items.map((image) => 
                   <SwiperSlide key={image.key}>
@@ -105,10 +118,18 @@ export default function CarouselClub({items} : Images){
                           <Image src={image.src} width={image.width} height={image.height} alt={image.alt} ></Image>
                       </div>   
                     )}
+                    
                  </SwiperSlide>   
                 )}
-                </Swiper>
+                <div className={styles.controllers}>
+                  <div className={styles['custom-swiper-button-prev']}><Image src='/assets/images/seta_nav_prev.svg' width={24} height={24} alt='prev'></Image></div>
+                  <div className={styles['custom-swiper-button-next']}><Image src='/assets/images/seta_nav_next.svg' width={24} height={24} alt='next'></Image></div>
                 </div>
+                
+                </Swiper>
+               
+                </div>
+                
             </div>
         </section>
       );

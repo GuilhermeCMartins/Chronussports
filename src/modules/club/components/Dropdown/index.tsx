@@ -44,9 +44,10 @@ export default function Dropdown({items, label}: State) {
                   <Menu.Item key={item.id} as={Fragment}>
                   {({ active }) => (
                     <div
-                      className={`${
-                        active ? styles.hover : ''
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      className={`
+                      ${active && item.id != 1 ? styles.hover : ''} 
+                      ${item.id === 1 ? styles.disable : ''} 
+                      group flex w-full items-center rounded-md px-4 py-2 text-sm`}
                     >
                       {item.label}
                     </div>

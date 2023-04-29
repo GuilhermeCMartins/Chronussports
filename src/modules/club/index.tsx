@@ -6,7 +6,7 @@ export default function ClubPage(){
     const images = [
         {
           key: 1,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -14,7 +14,7 @@ export default function ClubPage(){
         },
         {
           key: 2,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -22,7 +22,7 @@ export default function ClubPage(){
         },
         {
           key: 3,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -30,7 +30,7 @@ export default function ClubPage(){
         },
         {
           key: 4,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -38,7 +38,7 @@ export default function ClubPage(){
         },
         {
           key: 5,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/londrina.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -46,7 +46,7 @@ export default function ClubPage(){
         },
         {
           key: 6,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -54,7 +54,7 @@ export default function ClubPage(){
         },
         {
           key: 7,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -62,7 +62,7 @@ export default function ClubPage(){
         },
         {
           key: 8,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
@@ -70,7 +70,7 @@ export default function ClubPage(){
         },
         {
           key: 9,
-          src: '/assets/images/union.svg',
+          src: '/assets/images/brasao_example.svg',
           caption: 'Brasão',
           width: 200,
           height: 215,
