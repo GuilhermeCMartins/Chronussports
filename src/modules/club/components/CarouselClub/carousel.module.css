@@ -24,7 +24,6 @@
    border-radius: 16px;
    width: 130px;
    padding: 8px 16px;
-
    color: white;
 }
 
@@ -38,14 +37,33 @@
   max-width: 100%;
 }
 
-.image_active,
+
 .image{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 12px;
   height: 60vh;
-  border-radius: 50%;
 }
+
+.image_active p{
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 116%;
+  color: white;
+  text-align: center;
+  width: 280px;
+  text-transform: uppercase;
+  margin-bottom: -40px;
+}
+
+.caption_off {
+  display: none;
+}
+
 
 .image_active::before{
   content: "";
@@ -54,7 +72,6 @@
   top: 270px;
   z-index: -1;
   box-shadow: 0px 0px 90px 110px rgba(7, 116, 156, 0.60);
-  border-radius: 50%;
 }
 
 .dropdown{
@@ -121,7 +138,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    top: -15rem;
+    top: -18rem;
     width: 100%;
     padding: 0px 40px;
     z-index: 2;

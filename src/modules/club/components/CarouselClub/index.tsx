@@ -114,8 +114,9 @@ export default function CarouselClub({items} : Images){
                 {items.map((image) => 
                   <SwiperSlide key={image.key}>
                      {({ isActive }) => (
-                      <div className={isActive ? styles.image_active : styles.image}>
+                      <div className={`${isActive ? styles.image_active : ''} ${styles.image}`}>
                           <Image src={image.src} width={image.width} height={image.height} alt={image.alt} ></Image>
+                          <p className={`${isActive ? styles.caption : styles.caption_off}`}>{image.caption}</p>
                       </div>   
                     )}
                     
