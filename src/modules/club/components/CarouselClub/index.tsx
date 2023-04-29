@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
 import SwiperCore, { Navigation, EffectCoverflow } from 'swiper';
-import { Swiper, SwiperRef, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image'
 
 import styles from './carousel.module.css'
 
 import 'swiper/swiper-bundle.css';
-import Dropdown from '../Dropdown';
+import Modalidade from '../Select/Modalidade';
+import Nacionalidade from '../Select/Nacionalidade';
+import Ranking from '../Select/Ranking';
+import Regiao from '../Select/Regiao';
 
 type Images = {
     items: {
@@ -21,47 +23,17 @@ type Images = {
 
 SwiperCore.use([EffectCoverflow]);
 
-const nacionalidade = [
-  { id: 1, label: 'Qual a sua nacionalidade?' },
-  { id: 2, label: 'Brasileiro(a)' },
-  { id: 3, label: 'Alemão' },
-  { id: 4, label: 'Espanhol' },
-  { id: 5, label: 'Italiano(a)' },
-];
-
-const modalidade = [
-  { id: 1, label: 'Qual a modalidade?' },
-  { id: 2, label: 'Futebol' },
-  { id: 3, label: 'Basquete' },
-  { id: 4, label: 'Vôlei' },
-  { id: 5, label: 'Futsal' },
-];
-
-const regiao = [
-  { id: 1, label: 'De qual Região?' },
-  { id: 2, label: 'Norte' },
-  { id: 3, label: 'Nordeste' },
-  { id: 4, label: 'Sul' },
-  { id: 5, label: 'Sudeste' },
-];
-
-const ranking = [
-  { id: 1, label: 'Ranking' },
-  { id: 2, label: 'Nacional' },
-  { id: 3, label: 'Internacional' },
-];
-
 export default function CarouselClub({items} : Images){    
 
     return (
         <section className={styles.section}>
-          
            <div className={styles.container}>
+           
            <div className={styles.dropdown}>
-              <Dropdown items={nacionalidade} label='Nacionalidade'></Dropdown>
-              <Dropdown items={modalidade} label='Modalidade'></Dropdown>
-              <Dropdown items={regiao} label='Região'></Dropdown>
-              <Dropdown items={ranking} label='Ranking'></Dropdown>
+              <Modalidade></Modalidade>
+              <Nacionalidade></Nacionalidade>
+              <Ranking></Ranking>
+              <Regiao></Regiao>
               <button className={styles.button}>Aplicar</button>
             </div>
             

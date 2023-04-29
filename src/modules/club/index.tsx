@@ -11,6 +11,7 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Nacional'
         },
         {
           key: 2,
@@ -19,6 +20,7 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Nacional'
         },
         {
           key: 3,
@@ -27,6 +29,7 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Nacional'
         },
         {
           key: 4,
@@ -35,6 +38,7 @@ export default function ClubPage(){
           width: 350,
           height: 350,
           alt: 'Brasão',
+          nacionality: 'Nacional'
         },
         {
           key: 5,
@@ -43,6 +47,7 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Nacional'
         },
         {
           key: 6,
@@ -51,6 +56,7 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Internacional'
         },
         {
           key: 7,
@@ -59,6 +65,8 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Internacional'
+
         },
         {
           key: 8,
@@ -67,6 +75,8 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Internacional'
+
         },
         {
           key: 9,
@@ -75,6 +85,7 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
+          nacionality: 'Internacional'
         },
     ]
     return <>
