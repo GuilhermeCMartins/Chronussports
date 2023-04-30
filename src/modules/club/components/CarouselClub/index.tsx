@@ -5,7 +5,8 @@ import Image from 'next/image'
 import styles from './carousel.module.css'
 
 import 'swiper/swiper-bundle.css';
-import SelectCarousel from '../Select/select';
+
+import SelectCarousel from '../Select/Select';
 
 
 type Images = {
