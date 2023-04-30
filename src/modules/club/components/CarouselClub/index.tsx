@@ -5,10 +5,8 @@ import Image from 'next/image'
 import styles from './carousel.module.css'
 
 import 'swiper/swiper-bundle.css';
-import Modalidade from '../Select/Modalidade';
-import Nacionalidade from '../Select/Nacionalidade';
-import Ranking from '../Select/Ranking';
-import Regiao from '../Select/Regiao';
+import SelectCarousel from '../Select/select';
+
 
 type Images = {
     items: {
@@ -21,6 +19,47 @@ type Images = {
     }[];
   };
 
+  type Option = {
+    id: number;
+    name: string;
+    unavailable: boolean;
+  }
+
+const modalidade = [
+  { id: 1, name: 'Qual a modalidade?', unavailable: true },
+  { id: 2, name: 'Futebol', unavailable: false },
+  { id: 3, name: 'Basquete', unavailable: false },
+  { id: 4, name: 'Vôlei', unavailable: false },
+  { id: 5, name: 'Futsal', unavailable: false },
+  { id: 6, name: 'Todos', unavailable: false}
+];
+
+
+const regiao: Option[] = [
+  { id: 1, name: 'De qual Região?', unavailable: true },
+  { id: 2, name: 'Norte', unavailable: false },
+  { id: 3, name: 'Nordeste', unavailable: false },
+  { id: 4, name: 'Sul', unavailable: false },
+  { id: 5, name: 'Sudeste', unavailable: false },
+  { id: 6, name: 'Todos', unavailable: false}
+];
+
+const ranking: Option[] = [
+  { id: 1, name: 'Ranking', unavailable: true },
+  { id: 2, name: 'Nacional', unavailable: false },
+  { id: 3, name: 'Internacional', unavailable: false },
+  { id: 4, name: 'Todos', unavailable: false },
+];
+
+const nacionalidade: Option[] = [
+  { id: 1, name: 'Qual a sua nacionalidade?', unavailable: true },
+  { id: 2, name: 'Brasileiro(a)', unavailable: false },
+  { id: 3, name: 'Alemão', unavailable: false },
+  { id: 4, name: 'Espanhol', unavailable: false },
+  { id: 5, name: 'Italiano(a)', unavailable: false },
+  { id: 6, name: 'Todos', unavailable: false}
+];
+
 SwiperCore.use([EffectCoverflow]);
 
 export default function CarouselClub({items} : Images){    
@@ -30,11 +69,12 @@ export default function CarouselClub({items} : Images){
            <div className={styles.container}>
            
            <div className={styles.dropdown}>
-              <Modalidade></Modalidade>
-              <Nacionalidade></Nacionalidade>
-              <Ranking></Ranking>
-              <Regiao></Regiao>
+              <SelectCarousel options={ranking} label='Ranking' ></SelectCarousel>
+              <SelectCarousel options={modalidade} label='Modalidade'></SelectCarousel>
+              <SelectCarousel options={nacionalidade} label='Nacionalidade'></SelectCarousel>
+              <SelectCarousel options={regiao} label='Região'></SelectCarousel>
               <button className={styles.button}>Aplicar</button>
+              <button className={styles.button}>Limpar</button>
             </div>
             
             <div className={styles.slider}>
