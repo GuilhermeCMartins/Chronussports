@@ -12,15 +12,12 @@ type Option = {
 interface Props {
     options: Option[];
     label: string;
+    selectedValue: Option;
+    onChange: (option: Option) => void;
 }
 
 
-const SelectCarousel: FC<Props> = ({options, label}) => {
-  const [selected, setSelected] = useState<Option | null>(null);
-
-  function handleSelect(option: Option) {
-    setSelected(option);
-  }
+const SelectCarousel: FC<Props> = ({options, label, selectedValue, onChange}) => {
 
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
@@ -28,11 +25,11 @@ const SelectCarousel: FC<Props> = ({options, label}) => {
 
   return (
   <div className="top-16 text-center items-center">
-    <Listbox value={selected} onChange={handleSelect} as='div' className="relative inline-block text-left" >
+    <Listbox value={selectedValue} onChange={onChange} as='div' className="relative inline-block text-left" >
       <div>
       <Listbox.Button className={`${styles.button} inline-flex w-full justify-center rounded-md text-base not-italic font-normal text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 items-center `}>
         
-        {selected ? <span className="block truncate">{selected.name}</span> : <label>{label}</label> }
+        {selectedValue ? <span className="block truncate">{selectedValue.name}</span> : <label>{label}</label> }
         
         <ChevronDownIcon
               className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"

@@ -11,7 +11,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Nacional'
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
         {
           key: 2,
@@ -20,7 +22,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Nacional'
+          ranking: 'Mundial',
+          modalidade: 'Basquete',
+          paises: 'Argentina',
         },
         {
           key: 3,
@@ -29,7 +33,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Nacional'
+          ranking: 'Nacional',
+          modalidade: 'Vôlei',
+          paises: 'África do sul',
         },
         {
           key: 4,
@@ -38,7 +44,9 @@ export default function ClubPage(){
           width: 350,
           height: 350,
           alt: 'Brasão',
-          nacionality: 'Nacional'
+          ranking: 'Nacional',
+          modalidade: 'Futsal',
+          paises: 'Alemanha',
         },
         {
           key: 5,
@@ -47,7 +55,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Nacional'
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
         {
           key: 6,
@@ -56,7 +66,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Internacional'
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
         {
           key: 7,
@@ -65,7 +77,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Internacional'
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
 
         },
         {
@@ -75,7 +89,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Internacional'
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
 
         },
         {
@@ -85,7 +101,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Internacional'
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
         {
           key: 10,
@@ -94,7 +112,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          nacionality: 'Internacional'
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
     ]
     return <>

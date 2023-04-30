@@ -1,64 +1,81 @@
+import { useState } from 'react'
+
 import SwiperCore, { Navigation, EffectCoverflow } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+
 import Image from 'next/image'
 
 import styles from './carousel.module.css'
-
-import 'swiper/swiper-bundle.css';
-
 import SelectCarousel from '../Select/Select';
 
+interface Images {
+  key: number;
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+  ranking: string;
+  modalidade: string;
+  paises: string;
+}
 
-type Images = {
-    items: {
-      key: number;
-      src: string;
-      alt: string;
-      caption: string;
-      width: number;
-      height: number;
-    }[];
-  };
+interface Props {
+  items: Images[];
+}
 
   type Option = {
-    id: number;
-    name: string;
-    unavailable: boolean;
-  }
+  id: number;
+  name: string;
+  unavailable: boolean;
+}
 
-const modalidade = [
-  { id: 1, name: 'Qual a modalidade?', unavailable: true },
-  { id: 2, name: 'Futebol', unavailable: false },
-  { id: 3, name: 'Basquete', unavailable: false },
-  { id: 4, name: 'Vôlei', unavailable: false },
-  { id: 5, name: 'Futsal', unavailable: false },
-  { id: 6, name: 'Todos', unavailable: false}
-];
-
-
-const ranking = [
-  { id: 1, name: 'Ranking', unavailable: true },
-  { id: 2, name: 'Nacional', unavailable: false },
-  { id: 3, name: 'Mundial', unavailable: false },
-  { id: 4, name: 'Todos', unavailable: false },
-];
-
+import { modalidade } from '@/utils/modalidade';
+import { ranking } from '@/utils/ranking';
 import paisesComId from '@/utils/country'; 
 
 SwiperCore.use([EffectCoverflow]);
 
-export default function CarouselClub({items} : Images){    
+export default function CarouselClub({items} : Props){    
+    const [data, ] = useState<Images[]>(items);
+    const [selectedRanking, setSelectedRanking] = useState<Option>({ id: 0, name: 'Ranking', unavailable: true });
+    const [selectedModalidade, setSelectedModalidade] = useState<Option>({ id: 0, name: 'Modalidade', unavailable: true });
+    const [selectedPaises, setSelectedPaises] = useState<Option>({ id: 0, name: "País", unavailable: true });
+    const [appliedFilters, setAppliedFilters] = useState<{ ranking: string; modalidade: string; paises: string } | null>(null);
+
+
+    function handleClear() {
+      setSelectedRanking({ id: 0, name: 'Ranking', unavailable: true });
+      setSelectedModalidade({ id: 0, name: 'Modalidade', unavailable: true });
+      setSelectedPaises({ id: 0, name: "País", unavailable: true });
+    }
+
+    function handleFilter(){
+      const filters = { ranking: selectedRanking.name, modalidade: selectedModalidade.name, paises: selectedPaises.name };
+      setAppliedFilters(filters);
+    }
+
+    let filteredData = data;
+    if (appliedFilters) {
+      filteredData = filteredData.filter((item) => {
+        const rankingMatch = !appliedFilters.ranking || item.ranking.toLowerCase().includes(appliedFilters.ranking.toLowerCase());
+        const modalidadeMatch = !appliedFilters.modalidade || item.modalidade.toLowerCase().includes(appliedFilters.modalidade.toLowerCase());
+        const paisesMatch = !appliedFilters.paises || item.paises.toLowerCase().includes(appliedFilters.paises.toLowerCase());
+        return rankingMatch && modalidadeMatch && paisesMatch;
+      });
+    }
 
     return (
         <section className={styles.section}>
            <div className={styles.container}>
            
            <div className={styles.dropdown}>
-              <SelectCarousel options={ranking} label='Ranking' ></SelectCarousel>
-              <SelectCarousel options={modalidade} label='Modalidade'></SelectCarousel>
-              <SelectCarousel options={paisesComId} label='Nacionalidade'></SelectCarousel>
-              <button className={styles.button}>Aplicar</button>
-              <button className={styles.button}>Limpar</button>
+              <SelectCarousel  selectedValue={selectedRanking} onChange={setSelectedRanking} options={ranking} label='Ranking' ></SelectCarousel>
+              <SelectCarousel  selectedValue={selectedModalidade} onChange={setSelectedModalidade} options={modalidade} label='Modalidade' ></SelectCarousel>
+              <SelectCarousel  selectedValue={selectedPaises} onChange={setSelectedPaises} options={paisesComId} label='País' ></SelectCarousel>
+              <button className={styles.button} onClick={handleFilter}>Aplicar</button>
+              <button className={styles.button} onClick={handleClear}>Limpar</button>
             </div>
             
             <div className={styles.slider}>
