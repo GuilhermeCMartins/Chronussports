@@ -7,7 +7,7 @@ export default function ClubPage(){
         {
           key: 1,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Sport',
           width: 330,
           height: 330,
           alt: 'Brasão',
@@ -16,7 +16,7 @@ export default function ClubPage(){
         {
           key: 2,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Náutico',
           width: 330,
           height: 330,
           alt: 'Brasão',
@@ -25,7 +25,7 @@ export default function ClubPage(){
         {
           key: 3,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Santa Cruz',
           width: 330,
           height: 330,
           alt: 'Brasão',
@@ -34,7 +34,7 @@ export default function ClubPage(){
         {
           key: 4,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Grêmio',
           width: 350,
           height: 350,
           alt: 'Brasão',
@@ -52,7 +52,7 @@ export default function ClubPage(){
         {
           key: 6,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Inter',
           width: 330,
           height: 330,
           alt: 'Brasão',
@@ -61,7 +61,7 @@ export default function ClubPage(){
         {
           key: 7,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Leiria',
           width: 330,
           height: 330,
           alt: 'Brasão',
@@ -71,7 +71,7 @@ export default function ClubPage(){
         {
           key: 8,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Lito',
           width: 330,
           height: 330,
           alt: 'Brasão',
@@ -81,7 +81,16 @@ export default function ClubPage(){
         {
           key: 9,
           src: '/assets/images/brasao_example.svg',
-          caption: 'Brasão',
+          caption: 'Episkopi',
+          width: 330,
+          height: 330,
+          alt: 'Brasão',
+          nacionality: 'Internacional'
+        },
+        {
+          key: 10,
+          src: '/assets/images/brasao_example.svg',
+          caption: 'Barcelona',
           width: 330,
           height: 330,
           alt: 'Brasão',
