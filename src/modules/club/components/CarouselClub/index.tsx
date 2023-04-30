@@ -36,30 +36,14 @@ const modalidade = [
 ];
 
 
-const regiao: Option[] = [
-  { id: 1, name: 'De qual Região?', unavailable: true },
-  { id: 2, name: 'Norte', unavailable: false },
-  { id: 3, name: 'Nordeste', unavailable: false },
-  { id: 4, name: 'Sul', unavailable: false },
-  { id: 5, name: 'Sudeste', unavailable: false },
-  { id: 6, name: 'Todos', unavailable: false}
-];
-
-const ranking: Option[] = [
+const ranking = [
   { id: 1, name: 'Ranking', unavailable: true },
   { id: 2, name: 'Nacional', unavailable: false },
-  { id: 3, name: 'Internacional', unavailable: false },
+  { id: 3, name: 'Mundial', unavailable: false },
   { id: 4, name: 'Todos', unavailable: false },
 ];
 
-const nacionalidade: Option[] = [
-  { id: 1, name: 'Qual a sua nacionalidade?', unavailable: true },
-  { id: 2, name: 'Brasileiro(a)', unavailable: false },
-  { id: 3, name: 'Alemão', unavailable: false },
-  { id: 4, name: 'Espanhol', unavailable: false },
-  { id: 5, name: 'Italiano(a)', unavailable: false },
-  { id: 6, name: 'Todos', unavailable: false}
-];
+import paisesComId from '@/utils/country'; 
 
 SwiperCore.use([EffectCoverflow]);
 
@@ -72,8 +56,7 @@ export default function CarouselClub({items} : Images){
            <div className={styles.dropdown}>
               <SelectCarousel options={ranking} label='Ranking' ></SelectCarousel>
               <SelectCarousel options={modalidade} label='Modalidade'></SelectCarousel>
-              <SelectCarousel options={nacionalidade} label='Nacionalidade'></SelectCarousel>
-              <SelectCarousel options={regiao} label='Região'></SelectCarousel>
+              <SelectCarousel options={paisesComId} label='Nacionalidade'></SelectCarousel>
               <button className={styles.button}>Aplicar</button>
               <button className={styles.button}>Limpar</button>
             </div>
