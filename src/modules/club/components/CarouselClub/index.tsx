@@ -69,7 +69,10 @@ export default function CarouselClub({items} : Props){
       setSelectedRanking({ id: 0, name: 'Ranking', unavailable: true });
       setSelectedModalidade({ id: 0, name: 'Modalidade', unavailable: true });
       setSelectedPaises({ id: 0, name: "País", unavailable: true });
+      setAppliedFilters(null);
     }
+
+    const initialSlide = Math.floor((filteredData.length / 2) - 1);
 
     return (
         <section className={styles.section}>
@@ -124,7 +127,7 @@ export default function CarouselClub({items} : Props){
                   }}
                   modules={[EffectCoverflow, Navigation]}
                   className={styles.swiper_container}
-                  initialSlide={4}
+                  initialSlide={initialSlide}
                   navigation = {{ 
                     prevEl: `.${styles['custom-swiper-button-prev']}`,
                     nextEl: `.${styles['custom-swiper-button-next']}`,
