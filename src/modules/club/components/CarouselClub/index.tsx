@@ -44,15 +44,12 @@ export default function CarouselClub({items} : Props){
     const [selectedPaises, setSelectedPaises] = useState<Option>({ id: 0, name: "País", unavailable: true });
     const [appliedFilters, setAppliedFilters] = useState<{ ranking: string; modalidade: string; paises: string } | null>(null);
 
-
-    function handleClear() {
-      setSelectedRanking({ id: 0, name: 'Ranking', unavailable: true });
-      setSelectedModalidade({ id: 0, name: 'Modalidade', unavailable: true });
-      setSelectedPaises({ id: 0, name: "País", unavailable: true });
-    }
-
-    function handleFilter(){
-      const filters = { ranking: selectedRanking.name, modalidade: selectedModalidade.name, paises: selectedPaises.name };
+    function handleFilter() {
+      const filteredRanking = selectedRanking.name === "Todos" || selectedRanking.name === 'Ranking' ? "" : selectedRanking.name;
+      const filteredModalidade = selectedModalidade.name === "Todos" || selectedModalidade.name === 'Modalidade' ? "" : selectedModalidade.name;
+      const filteredPaises = selectedPaises.name === "Todos" || selectedPaises.name === 'País' ? "" : selectedPaises.name;
+      const filters = { ranking: filteredRanking, modalidade: filteredModalidade, paises: filteredPaises };
+    
       setAppliedFilters(filters);
     }
 
@@ -64,6 +61,14 @@ export default function CarouselClub({items} : Props){
         const paisesMatch = !appliedFilters.paises || item.paises.toLowerCase().includes(appliedFilters.paises.toLowerCase());
         return rankingMatch && modalidadeMatch && paisesMatch;
       });
+    }
+
+    const hasClubs = filteredData.length > 0; 
+
+     function handleClear() {
+      setSelectedRanking({ id: 0, name: 'Ranking', unavailable: true });
+      setSelectedModalidade({ id: 0, name: 'Modalidade', unavailable: true });
+      setSelectedPaises({ id: 0, name: "País", unavailable: true });
     }
 
     return (
@@ -78,71 +83,80 @@ export default function CarouselClub({items} : Props){
               <button className={styles.button} onClick={handleClear}>Limpar</button>
             </div>
             
+            {hasClubs ?
             <div className={styles.slider}>
             <Swiper
-                breakpoints = {{
-                  2000:{
-                    slidesPerView: 7,
-                    slidesPerGroup: 1,
-                  },
-                  1600:{
-                    slidesPerView: 7,
-                    slidesPerGroup: 1,
-                  },
-                  1450:{
-                      slidesPerView: 6,
+                  breakpoints = {{
+                    2000:{
+                      slidesPerView: 7,
                       slidesPerGroup: 1,
-                  },
-                  1100:{
-                    slidesPerView: 5,
-                    slidesPerGroup: 1,
-                  },
-                  800: {
-                      slidesPerView: 4,
+                    },
+                    1600:{
+                      slidesPerView: 7,
                       slidesPerGroup: 1,
-                  },
-                  500: {
-                      slidesPerView: 3,
+                    },
+                    1450:{
+                        slidesPerView: 6,
+                        slidesPerGroup: 1,
+                    },
+                    1100:{
+                      slidesPerView: 5,
                       slidesPerGroup: 1,
-                  }
-              }}
-                effect={'coverflow'}
-                centeredSlides={true}
-                loop={false}
-                coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2.5,
-                slideShadows: false,
+                    },
+                    800: {
+                        slidesPerView: 4,
+                        slidesPerGroup: 1,
+                    },
+                    500: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 1,
+                    }
                 }}
-                modules={[EffectCoverflow, Navigation]}
-                className={styles.swiper_container}
-                initialSlide={4}
-                navigation = {{ 
-                  prevEl: `.${styles['custom-swiper-button-prev']}`,
-                  nextEl: `.${styles['custom-swiper-button-next']}`,
-                }}
-            >
-                {items.map((image) => 
-                  <SwiperSlide key={image.key}>
-                     {({ isActive }) => (
-                      <div className={`${isActive ? styles.image_active : ''} ${styles.image}`}>
-                          <Image src={image.src} width={image.width} height={image.height} alt={image.alt} ></Image>
-                          <p className={`${isActive ? styles.caption : styles.caption_off}`}>{image.caption}</p>
-                      </div>   
-                    )}
-                    
-                 </SwiperSlide>   
-                )}
-                <div className={styles.controllers}>
-                  <div className={styles['custom-swiper-button-prev']}><Image src='/assets/images/seta_nav_prev.svg' width={24} height={24} alt='prev'></Image></div>
-                  <div className={styles['custom-swiper-button-next']}><Image src='/assets/images/seta_nav_next.svg' width={24} height={24} alt='next'></Image></div>
-                </div>
-                
-                </Swiper>
-               
-                </div>
+                  effect={'coverflow'}
+                  centeredSlides={true}
+                  loop={false}
+                  coverflowEffect={{
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 2.5,
+                  slideShadows: false,
+                  }}
+                  modules={[EffectCoverflow, Navigation]}
+                  className={styles.swiper_container}
+                  initialSlide={4}
+                  navigation = {{ 
+                    prevEl: `.${styles['custom-swiper-button-prev']}`,
+                    nextEl: `.${styles['custom-swiper-button-next']}`,
+                  }}
+              >
+                  {filteredData.map((image) => 
+                    <SwiperSlide key={image.key}>
+                       {({ isActive }) => (
+                        <div className={`${isActive ? styles.image_active : ''} ${styles.image}`}>
+                            <Image src={image.src} width={image.width} height={image.height} alt={image.alt} ></Image>
+                            <p className={`${isActive ? styles.caption : styles.caption_off}`}>{image.caption}</p>
+                        </div>   
+                      )}
+                      
+                   </SwiperSlide>   
+                  )}
+  
+                  <div className={styles.controllers}>
+                    <div className={styles['custom-swiper-button-prev']}><Image src='/assets/images/seta_nav_prev.svg' width={24} height={24} alt='prev'></Image></div>
+                    <div className={styles['custom-swiper-button-next']}><Image src='/assets/images/seta_nav_next.svg' width={24} height={24} alt='next'></Image></div>
+                  </div>
+                  
+                  </Swiper>
+                 
+                  </div>
+              
+            : 
+              
+            <div className={styles.noclubs}>
+              <h1>Não foram encontrados clubes que correspondam aos critérios selecionados.</h1>
+            </div>}
+            
                 
             </div>
         </section>

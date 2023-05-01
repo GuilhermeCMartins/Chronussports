@@ -22,9 +22,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          ranking: 'Mundial',
-          modalidade: 'Basquete',
-          paises: 'Argentina',
+          ranking: 'Nacional',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
         {
           key: 3,
@@ -34,8 +34,8 @@ export default function ClubPage(){
           height: 330,
           alt: 'Brasão',
           ranking: 'Nacional',
-          modalidade: 'Vôlei',
-          paises: 'África do sul',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
         {
           key: 4,
@@ -45,8 +45,8 @@ export default function ClubPage(){
           height: 350,
           alt: 'Brasão',
           ranking: 'Nacional',
-          modalidade: 'Futsal',
-          paises: 'Alemanha',
+          modalidade: 'Futebol',
+          paises: 'Brasil',
         },
         {
           key: 5,
@@ -79,7 +79,7 @@ export default function ClubPage(){
           alt: 'Brasão',
           ranking: 'Nacional',
           modalidade: 'Futebol',
-          paises: 'Brasil',
+          paises: 'Portugal',
 
         },
         {
@@ -101,9 +101,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          ranking: 'Nacional',
+          ranking: 'Mundial',
           modalidade: 'Futebol',
-          paises: 'Brasil',
+          paises: 'Grécia',
         },
         {
           key: 10,
@@ -112,9 +112,9 @@ export default function ClubPage(){
           width: 330,
           height: 330,
           alt: 'Brasão',
-          ranking: 'Nacional',
+          ranking: 'Mundial',
           modalidade: 'Futebol',
-          paises: 'Brasil',
+          paises: 'Espanha',
         },
     ]
     return <>

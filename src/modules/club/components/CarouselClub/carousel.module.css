@@ -27,16 +27,13 @@
    color: white;
 }
 
-
-
 .slider { 
-  max-width: 100%;
+  width: 79vw;
 }
 
 .swiper_container {
   max-width: 100%;
 }
-
 
 .image{
   display: flex;
@@ -46,6 +43,27 @@
   gap: 12px;
   height: 60vh;
 }
+
+.noclubs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+.noclubs h1{
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 116%;
+  color: white;
+  text-align: center;
+  width: 60%;
+  text-transform: uppercase;
+}
+
 
 .image_active p{
   font-family: 'Outfit';
