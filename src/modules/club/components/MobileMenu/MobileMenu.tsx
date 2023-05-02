@@ -34,7 +34,6 @@ const MobileMenu: React.FC<Props> = ({onFilter, onClose}) => {
     const filteredModalidade = selectedModalidade.name === "Todos" || selectedModalidade.name === 'Modalidade' ? "" : selectedModalidade.name;
     const filteredPaises = selectedPaises.name === "Todos" || selectedPaises.name === 'País' ? "" : selectedPaises.name;
     const filters = { ranking: filteredRanking, modalidade: filteredModalidade, paises: filteredPaises };
-    console.log(filters);
     if (onFilter) {
       onFilter(filters);
     }
