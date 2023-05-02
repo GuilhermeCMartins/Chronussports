@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Submit from './components/buttons/Submit/Submit';
 import FiltersMobile from './components/FiltersMobile/FiltersMobile';
 
-import styles from './mobileMenu.module.css';
+import styles from './MobileMenu.module.css';
 
 import { ranking } from '@/utils/ranking';
 import { modalidade } from '@/utils/modalidade';
