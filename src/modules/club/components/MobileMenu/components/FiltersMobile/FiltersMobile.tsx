@@ -1,7 +1,8 @@
-import { useState, Fragment, FC } from 'react'
+import { Fragment, FC } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
-import styles from './styles.module.css'
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+
+import styles from './styles.module.css'
 
 type Option = {
   id: number;
@@ -17,7 +18,7 @@ interface Props {
 }
 
 
-const SelectCarousel: FC<Props> = ({options, label, selectedValue, onChange}) => {
+const FiltersMobile: FC<Props> = ({options, label, selectedValue, onChange}) => {
 
   function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
@@ -46,13 +47,13 @@ const SelectCarousel: FC<Props> = ({options, label, selectedValue, onChange}) =>
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-      <Listbox.Options className={`${styles.menu} absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}>
+      <Listbox.Options className={`${styles.menu} absolute top-0 left-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}>
         <div className="px-1 py-1">
         {options.map((option) => (
           <Listbox.Option key={option.name} value={option} disabled={option.unavailable} className={({ active }) =>
           classNames(
-            active ? 'bg-indigo-600 mx-4  text-white not-italic font-semibold text-xs leading-[150%] text-[#EEEEEE] bg-[#164092] rounded-[7px]' : 'not-italic mx-4  font-semibold text-xs leading-[150%] text-[#EEEEEE]',
-            'relative cursor-default select-none py-1 pl-3 pr-9 bg-[#131740]'
+            active ? 'bg-indigo-600 mx-4  text-white not-italic font-semibold text-xs leading-[150%] text-[#EEEEEE]  rounded-[7px]' : 'not-italic mx-4  font-semibold text-xs leading-[150%] text-[#EEEEEE]',
+            'relative cursor-default select-none py-1 pl-3 pr-9 '
           )
           }>
             {({ selected, active }) => (
@@ -71,4 +72,4 @@ const SelectCarousel: FC<Props> = ({options, label, selectedValue, onChange}) =>
   )
 }
 
-export default SelectCarousel;
+export default FiltersMobile;
