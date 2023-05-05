@@ -37,6 +37,7 @@ type Option = {
 import { modalidade } from '@/utils/modalidade';
 import { ranking } from '@/utils/ranking';
 import paisesComId from '@/utils/country'; 
+import Link from 'next/link';
 
 
 
@@ -159,7 +160,7 @@ export default function CarouselClub({items} : Props){
                         {({ isActive }) => (
                           <div className={`${isActive ? styles.image_active : ''} ${styles.image}`}>
                               <Image src={image.src} width={image.width} height={image.height} alt={image.alt} ></Image>
-                              <p className={`${isActive ? styles.caption : styles.caption_off}`}>{image.caption}</p>
+                              <Link href="/clubes/[key]" as={`/clubes/${image.key}`}><p className={`${isActive ? styles.caption : styles.caption_off}`}>{image.caption}</p></Link>
                           </div>   
                         )}
                         

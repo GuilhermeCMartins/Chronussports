@@ -6,7 +6,7 @@ const navigation = {
     browser: [
         { name: 'Home', href: '/' },
         { name: 'CHRONUS Sports Atletas', href: '#' },
-        { name: 'CHRONUS Sports Clubes', href: '/club' },
+        { name: 'CHRONUS Sports Clubes', href: '/clubes' },
         { name: 'CHRONUS Sports Education', href: '#' },
         { name: 'CHRONUS Sports Marketplace Primary', href: '#' },
         { name: 'CHRONUS Sports Marketplace Secondary', href: '#' },

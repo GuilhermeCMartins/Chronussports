@@ -1,0 +1,16 @@
+.sectionAdm {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    height: 80vh;
+}
+
+.container_left {
+    width: 50%;
+    color: white;
+}
+
+.container_right {
+    width: 50%;
+    color: white;
+}

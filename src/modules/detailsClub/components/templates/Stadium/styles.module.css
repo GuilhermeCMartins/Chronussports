@@ -1,0 +1,98 @@
+.section {
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+}
+
+.section h1{
+    font-family: 'Outfit';
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    padding: 4rem 0;
+}
+
+.container_image{
+    display: flex;
+    position: relative;
+    gap: 4em;
+    width: 100%;
+    
+}
+
+.image{
+    position: relative;
+    width: fit-content;
+}
+
+.image::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    background: linear-gradient(to right, rgba(0, 0, 70,0.6), transparent);
+    border-radius: 16px;
+}
+
+.image::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    background: linear-gradient(to left, rgba(0, 0, 70,0.6), transparent);
+    border-radius: 16px;
+}
+
+
+.container_sub{
+    position: absolute;
+    top: 245px;
+    left: 0px;
+    height: 20%;
+    background: rgba(22, 65, 148, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    padding: 4rem 3rem 4rem 1rem;
+    width: 100%;
+}
+
+.info th,
+.info td{
+    padding: 1rem 6rem 1rem 0;
+}
+
+.info th:last-child,
+.info td:last-child{
+    padding: 0 1rem 0 0;
+}
+
+.info th,
+.info td{
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+
+
+
+.info thead{
+    border-bottom: 1px solid white;
+}

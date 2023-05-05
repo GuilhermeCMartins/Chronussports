@@ -1,0 +1,96 @@
+.section {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container{
+    display: flex;
+    gap: 5%;
+}
+
+.container_left{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+}
+
+.container_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+    gap: 60px;
+    width: 55%;
+    color: white;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title h1{
+    font-family: 'Outfit';
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.title p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+}
+
+.container_right h4{
+    font-family: 'Outfit';
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 116%;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+
+.fans h3{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.fans p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #00E4FF;
+}
+
+
+.links{
+    display: flex;
+    gap: 40px;
+    margin-top: 14px;
+}

@@ -1,0 +1,101 @@
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  
+}
+
+.container{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+  width: 80%;
+  border-radius: 16px; 
+}
+
+.info_name{
+  width: 31rem;
+  position: absolute;
+  top: 5rem;
+  right: 0rem;
+}
+
+.info_name h1{
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 113.5%;
+  color: #FFFFFF;
+} 
+
+.info_name h3{
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #CFC92D;
+  
+}
+
+.name h1{
+  color: white;
+}
+
+.name h3{
+  color: white;
+}
+
+.button{
+ background-color: #164092;
+ border-radius: 16px;
+ width: 130px;
+ padding: 8px 16px;
+ color: white;
+}
+
+.active {
+  transition: transform 0.5s ease-in-out;
+  transform: translate3d(0,0,50px);
+}
+
+.slider { 
+width: 79vw;
+}
+
+.swiper_container {
+  max-width: 100%;
+}
+
+.controllers{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -8rem;
+  width: 100%;
+  padding: 0px 40px;
+  z-index: 2;
+  
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+color: #fff;
+cursor: pointer;
+}
+
+.custom-swiper-button-prev:before,
+.custom-swiper-button-next:before {
+font-size: 20px;
+line-height: 1;
+display: block;
+transform: translateY(-50%);
+}

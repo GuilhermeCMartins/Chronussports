@@ -1,9 +1,7 @@
 .menu{
     width: 20vw;
     max-height: 30vh;
-
     overflow: auto;
-
     white-space: nowrap;
     z-index: 2;
     background-color: rgb(19, 23, 64);

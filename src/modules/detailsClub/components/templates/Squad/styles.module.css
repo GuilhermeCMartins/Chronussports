@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    margin-top: 10rem;
+}
+
+.title{
+    text-align: center;
+    color: white;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.squad{
+    background-image: url('/assets/images/clubs/Squad/bg_linhas.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 140vh;
+}

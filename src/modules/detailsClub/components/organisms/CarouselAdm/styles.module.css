@@ -1,0 +1,40 @@
+.section{
+  width: 100%;
+  position: relative;
+}
+
+.swiper {
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.controllers{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 10rem;
+  left: -10rem;
+  width: 38rem;
+  padding: 0px 40px;
+  z-index: 2;  
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+color: #fff;
+cursor: pointer;
+}
+
+.custom-swiper-button-prev:before,
+.custom-swiper-button-next:before {
+font-size: 20px;
+line-height: 1;
+display: block;
+transform: translateY(-50%);
+}

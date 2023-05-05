@@ -13,7 +13,7 @@ export default function Solutions() {
 
   const items: Anchor[] = [
     { href: '/', label: 'CHRONUS Sports Atletas' },
-    { href: '/club', label: 'CHRONUS Sports Clubes' },
+    { href: '/clubes', label: 'CHRONUS Sports Clubes' },
     { href: '/', label: 'CHRONUS Sports Education' },
     { href: '/', label: 'CHRONUS Sports Marketplace Primary' },
     { href: '/', label: 'CHRONUS Sports Marketplace Secondary' },
