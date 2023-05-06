@@ -211,10 +211,70 @@
 
 /* Container rigth */
 
-.container_right{
+.container_right {
     display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 50%;
+}
+
+.brason_container {
+    position: relative;
+    z-index: 1;
+}
+
+.brason_container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    border-radius: 40%;
+    box-shadow: 0px 0px 100px 192px rgba(7, 116, 156, .5);
+    z-index: -1;
+}
+
+.elipses01{
+    background-image: url('/assets/images/clubs/ellipses/elipses01.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 8rem;
+    left: -3.5rem;
+    z-index: 1;
+    transform: rotate(-180deg);
+}
+.elipses02{
+    background-image: url('/assets/images/clubs/ellipses/elipses02.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(1.5px);
+
+}
+
+.elipses03{
+    background-image: url('/assets/images/clubs/ellipses/elipses03.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -4rem;
+    left: 10rem;
+    z-index: 1;
+    filter: blur(1.5px);
 }

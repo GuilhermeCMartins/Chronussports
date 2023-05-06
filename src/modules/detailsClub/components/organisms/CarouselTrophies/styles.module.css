@@ -4,6 +4,23 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+}
+
+.container{
+  position: relative;
+}
+
+.container::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0px 0px 180px 383px rgba(7, 116, 156, .4);
+  z-index: -1;
+  transform: scaleX(2);
 }
 
 .container{

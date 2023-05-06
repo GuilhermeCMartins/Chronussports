@@ -10,11 +10,25 @@
 }
 
 .container_left{
+    position: relative;
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
     width: 40%;
     height: 100vh;
+}
+
+.container_left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(2);
+    width: 20%;
+    height: 1%;
+    border-radius: 30%;
+    box-shadow: 0px 0px 80px 130px rgba(7, 116, 156, .5);
+    z-index: -1;
 }
 
 .container_right{

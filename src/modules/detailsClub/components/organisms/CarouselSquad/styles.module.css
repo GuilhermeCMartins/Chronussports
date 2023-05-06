@@ -21,6 +21,17 @@
   border-radius: 16px; 
 }
 
+.container::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0px 0px 140px 320px rgba(7, 116, 156, .6);
+  z-index: -1;
+}
+
 .info_name{
   width: 31rem;
   position: absolute;

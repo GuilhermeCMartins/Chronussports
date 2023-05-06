@@ -19,7 +19,7 @@ export default function Fans({fans} : FansProps){
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.container_left}>
-                    <Image src={fans.jersey} width={400} height={450} alt=''></Image>
+                    <Image src={fans.jersey} width={400} height={450} alt='' className={styles.img}></Image>
                 </div>
                 <div className={styles.container_right}>
                     <div className={styles.title}>
