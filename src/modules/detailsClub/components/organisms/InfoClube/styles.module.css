@@ -3,16 +3,25 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .title{
     font-family: 'Outfit';
     font-weight: 900;
-    font-size: 58px;
+    font-size: 45px;
+    line-height: 100%;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #00E4FF;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .description{

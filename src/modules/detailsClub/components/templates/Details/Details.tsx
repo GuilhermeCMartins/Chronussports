@@ -69,7 +69,7 @@ export default function Details(clube: DetailsProps){
 
             <div className={styles.container_right}>
                 <div></div>
-                <Image src={clube.clube.src} alt='Brasão' width={408} height={408}></Image>
+                <Image src={clube.clube.src} alt='Brasão' width={408} height={408} className={styles.brason}></Image>
             </div>
             
             

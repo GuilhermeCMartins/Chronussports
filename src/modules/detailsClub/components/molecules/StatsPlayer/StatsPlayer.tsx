@@ -16,6 +16,7 @@ interface StatsProps{
 
 
 export default function StatsPlayer(athlete: StatsProps){
+    
     return(
     <>
         <section className={styles.section}>

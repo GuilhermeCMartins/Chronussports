@@ -8,9 +8,8 @@
 
 .inner_donut{
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    top: 1.25rem;
+    right: .75rem;
 }
 
 .inner_donut h3{
@@ -20,4 +19,20 @@
     font-size: 12px;
     line-height: 150%;
     color: #FFFFFF;
+}
+
+.chartContainer {
+    position: relative;
+    display: none; 
+}
+  
+.visible {
+    position: relative;
+    display: block; 
+}
+
+.chartCanvas {
+    position: relative;
+    width: 100px;
+    height: 100px;
 }

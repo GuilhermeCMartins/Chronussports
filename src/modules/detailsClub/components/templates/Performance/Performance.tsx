@@ -2,7 +2,7 @@ import styles from './styles.module.css'
 import Chart from 'chart.js/auto';
 import { useRef, useEffect } from 'react'
 import ProgressBar from '../../atoms/Progressbar/Progressbar';
-import SelectYear from '../../atoms/Select/SelectYear';
+import SelectYear from '../../atoms/SelectPerformance/SelectYear';
 
 interface Props {
   games: number,

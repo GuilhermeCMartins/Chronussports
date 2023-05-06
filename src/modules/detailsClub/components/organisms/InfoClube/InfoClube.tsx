@@ -19,8 +19,10 @@ interface Props {
 export default function InfoClube(){
     return (
         <section className={styles.section}>
-            <h3 className={styles.title}>2016</h3>
-            <p className={styles.description}>História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.</p>
+            <div className={styles.text}>
+                <h3 className={styles.title}>A Ascensão</h3>
+                <p className={styles.description}>História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.</p>
+            </div>
             <div className={styles.container}>
                 <div className={styles.info}>
                     <p>Vitória: --</p>
