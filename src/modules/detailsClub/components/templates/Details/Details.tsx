@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './styles.module.css'
+import Overall from '../../atoms/Overall/Overall';
 
 interface Props{
     name: string,
@@ -7,6 +8,7 @@ interface Props{
     description: string, 
     valuation:number,
     ranking: number,
+    overall: number,
     internacional: number | null,
     points_cbf: number,
     src: string
@@ -69,6 +71,9 @@ export default function Details(clube: DetailsProps){
 
             <div className={styles.container_right}>
                 <div className={styles.brason_container}>
+                    <div  className={styles.overall}>
+                        <Overall overall={clube.clube.overall}></Overall>    
+                    </div>             
                     <Image src={clube.clube.src} alt='Brasão' width={408} height={408} className={styles.brason}></Image>
                     <span className={styles.elipses01}></span>
                     <span className={styles.elipses02}></span>

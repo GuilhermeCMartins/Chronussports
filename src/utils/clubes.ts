@@ -30,6 +30,34 @@ export interface Stadium{
   stadium_description: string;
   stadium_image: string;
 }
+export interface History{
+    year: number,
+    performance: {
+      games: number;
+      victories: number;
+      draws: number;
+      defeats: number;
+      goals_scoreds: number;
+      goals_conceded: number;
+    }
+}
+export interface Career{
+  year: number,
+    performance: {
+      description: string;
+      wins: number;
+      losses: number;
+      draws: number;
+      games: number;
+      scored_goals:number;
+      goals_conceded:number;
+      average_fans: number;
+      awards: number;
+      president: string;
+      manage: string;
+    }
+}
+
 
 export interface Clube {
     id: number;
@@ -44,6 +72,7 @@ export interface Clube {
     points_cbf: number;
     games: number;
     victories: number;
+    overall: number;
     draws: number;
     defeats: number;
     goals_scoreds: number;
@@ -52,10 +81,12 @@ export interface Clube {
     members: number,
     average: number,
     jersey : string,
+    history: History[],
     stadium: Stadium,
     trophies: Trophies[],
     roster : Athlete[],
-    administrators: Administrators[]
+    administrators: Administrators[],
+    career: Career[]
 }
   
 const clubes: Clube[] = [
@@ -69,6 +100,7 @@ const clubes: Clube[] = [
     valuation: 450.000, 
     ranking: 32, 
     internacional: null, 
+    overall: 60,
     points_cbf: 10,
     games: 30,
     victories: 15,
@@ -111,6 +143,149 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
     },
   {
@@ -121,6 +296,7 @@ const clubes: Clube[] = [
     endereco: 'Endereço do Clube A', 
     src: '/assets/images/clubs/brasao_mock.svg', 
     valuation: 450.000, 
+    overall: 60,
     ranking: 32, 
     internacional: null, 
     points_cbf: 10,
@@ -134,6 +310,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/brasao_example.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -165,6 +387,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   },
   {
@@ -176,6 +495,7 @@ const clubes: Clube[] = [
     src: '/assets/images/clubs/brasao_mock.svg', 
     valuation: 450.000, 
     ranking: 32, 
+    overall: 60,
     internacional: null, 
     points_cbf: 10,
     games: 30,
@@ -188,6 +508,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/brasao_example.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -219,6 +585,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   },
   {
@@ -230,6 +693,7 @@ const clubes: Clube[] = [
     src: '/assets/images/clubs/brasao_mock.svg', 
     valuation: 450.000, 
     ranking: 32, 
+    overall: 60,
     internacional: null, 
     points_cbf: 10,
     games: 30,
@@ -242,6 +706,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/brasao_example.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -273,6 +783,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   },
   {
@@ -287,6 +894,7 @@ const clubes: Clube[] = [
     internacional: null, 
     points_cbf: 3700,
     games: 30,
+    overall: 77,
     victories: 15,
     draws: 6,
     defeats: 9,
@@ -296,6 +904,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/clubs/camisa_londrina.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -426,7 +1080,104 @@ const clubes: Clube[] = [
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
     },
-  ]
+    ],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+    }]
     
   },
   {
@@ -441,6 +1192,7 @@ const clubes: Clube[] = [
     internacional: null, 
     points_cbf: 10,
     games: 30,
+    overall: 60,
     victories: 15,
     draws: 6,
     defeats: 9,
@@ -450,6 +1202,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/clubs/camisa_londrina.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -481,6 +1279,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   },
   {
@@ -495,6 +1390,7 @@ const clubes: Clube[] = [
     internacional: null, 
     points_cbf: 10,
     games: 30,
+    overall: 60,
     victories: 15,
     draws: 6,
     defeats: 9,
@@ -504,6 +1400,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/clubs/camisa_londrina.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -535,6 +1477,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   },
   {
@@ -551,6 +1590,7 @@ const clubes: Clube[] = [
     games: 30,
     victories: 15,
     draws: 6,
+    overall: 60,
     defeats: 9,
     goals_scoreds: 33,
     goals_conceded: 20,
@@ -558,6 +1598,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/clubs/camisa_londrina.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -589,6 +1675,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   },
   {
@@ -603,6 +1786,7 @@ const clubes: Clube[] = [
     internacional: null, 
     points_cbf: 10,
     games: 30,
+    overall: 60,
     victories: 15,
     draws: 6,
     defeats: 9,
@@ -612,6 +1796,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/clubs/camisa_londrina.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -643,6 +1873,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   },
   {
@@ -656,6 +1983,7 @@ const clubes: Clube[] = [
     ranking: 32, 
     internacional: null, 
     points_cbf: 10,
+    overall: 60,
     games: 30,
     victories: 15,
     draws: 6,
@@ -666,6 +1994,52 @@ const clubes: Clube[] = [
     members: 1400,
     average: 2300,
     jersey: '/assets/images/clubs/camisa_londrina.svg', 
+    history: [
+      {
+        year: 2023,
+        performance: {
+          games: 1200,
+          victories: 500,
+          draws: 500,
+          defeats: 200,
+          goals_scoreds: 250,
+          goals_conceded: 200,
+        },
+      },
+      {
+        year: 2022,
+        performance: {
+          games: 1000,
+          victories: 400,
+          draws: 300,
+          defeats: 300,
+          goals_scoreds: 200,
+          goals_conceded: 250,
+        },
+      },
+      {
+        year: 2021,
+        performance: {
+          games: 800,
+          victories: 300,
+          draws: 250,
+          defeats: 250,
+          goals_scoreds: 150,
+          goals_conceded: 180,
+        },
+      },
+      {
+        year: 2020,
+        performance: {
+          games: 700,
+          victories: 250,
+          draws: 200,
+          defeats: 250,
+          goals_scoreds: 120,
+          goals_conceded: 150,
+        },
+      },
+    ],
     stadium: {
       maximum_capacity: 35000,
       field_size: 100,
@@ -697,6 +2071,103 @@ const clubes: Clube[] = [
       initial_year: 2023,
       final_year: 2024,
       image: '/assets/images/clubs/rec.svg',
+    }],
+    career:[
+      {
+      year: 2023,
+      performance: {
+      description: 'Another great season!',
+      wins: 27,
+      losses: 1,
+      draws: 2,
+      games: 30,
+      scored_goals: 80,
+      goals_conceded: 15,
+      average_fans: 5500,
+      awards: 7,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2022,
+      performance: {
+      description: 'Amazing season with great results',
+      wins: 25,
+      losses: 3,
+      draws: 2,
+      games: 30,
+      scored_goals: 70,
+      goals_conceded: 20,
+      average_fans: 5000,
+      awards: 5,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2021,
+      performance: {
+      description: 'A solid season',
+      wins: 20,
+      losses: 5,
+      draws: 5,
+      games: 30,
+      scored_goals: 60,
+      goals_conceded: 30,
+      average_fans: 4500,
+      awards: 3,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2020,
+      performance: {
+      description: 'A season with mixed results',
+      wins: 15,
+      losses: 10,
+      draws: 5,
+      games: 30,
+      scored_goals: 50,
+      goals_conceded: 40,
+      average_fans: 4000,
+      awards: 2,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2019,
+      performance: {
+      description: 'A challenging season',
+      wins: 10,
+      losses: 15,
+      draws: 5,
+      games: 30,
+      scored_goals: 40,
+      goals_conceded: 50,
+      average_fans: 3500,
+      awards: 1,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
+      },
+      {
+      year: 2018,
+      performance: {
+      description: 'A tough season',
+      wins: 5,
+      losses: 20,
+      draws: 5,
+      games: 30,
+      scored_goals: 30,
+      goals_conceded: 60,
+      average_fans: 3000,
+      awards: 0,
+      president: 'John Doe',
+      manage: 'Jane Smith'
+      }
     }]
   }  
 ];

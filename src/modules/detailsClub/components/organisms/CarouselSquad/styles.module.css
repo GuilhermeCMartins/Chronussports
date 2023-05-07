@@ -72,9 +72,13 @@
  color: white;
 }
 
+.container_image{
+  perspective: 2000px;
+}
+
 .active {
-  transition: transform 0.5s ease-in-out;
-  transform: translate3d(0,0,50px);
+  transition: 0.5s ease-in-out;
+  transform: translate3d(0,0,250px);
 }
 
 .slider { 

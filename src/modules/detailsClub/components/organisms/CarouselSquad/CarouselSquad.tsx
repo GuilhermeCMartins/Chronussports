@@ -123,7 +123,7 @@ export default function CarouselSquad({athlete} : AthleteProps){
                   {athlete.map((ath, index) => (
                     <SwiperSlide key={ath.id}>
                       {({ isActive }) => (
-                        <div>
+                        <div className={styles.container_image}>
                           <Image
                             src={ath.carousel_img}
                             width={200}

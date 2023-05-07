@@ -1,0 +1,87 @@
+
+
+.stats{
+    display: flex;
+    width: 80%;
+    margin-top: 10% ;
+    justify-content: space-between;
+}
+
+.victories , .draws, .defeats{
+    display: block;
+    border-radius: 2px;
+    padding-left: 12px;
+}
+
+.victories{
+    border-left: 5px solid #00E4FF;
+}
+
+.draws{
+    border-left: 5px solid #164092;
+}
+
+.defeats{
+    border-left: 5px solid  #CF2D2D;
+}
+
+.victories h3, .draws h3 , .defeats h3{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 100%;
+
+    color: #FFFFFF;
+}
+
+.victories, .draws, .defeats p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+}
+
+
+.mychart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #164092;
+}
+
+.inner_donut{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner_donut h3{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 58px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: white;
+}
+
+.jogos{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 116%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}

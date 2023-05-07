@@ -1,0 +1,45 @@
+.progress{
+    display: grid;
+    grid-gap: 15px;
+    box-sizing: border-box;
+    background: linear-gradient(80.65deg, rgba(19, 55, 128, 0.2) 5.25%, rgba(35, 88, 193, 0.2) 100.74%);
+    width: 70%;
+    height: 80%;
+    border-radius: 16px;
+    padding: 46px 26px;
+}
+
+.progress h2{
+    font-family: 'Outfit';
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 116%;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #CAC8DA;
+}
+
+.goals{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.goals h3 {
+    color: white;
+    font-family: 'Outfit';
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 116%;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.goals p{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 117%;
+    color: #FFFFFF;
+}

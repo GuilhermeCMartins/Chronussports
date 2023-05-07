@@ -1,14 +1,14 @@
 .menu{
-    width: fit-content;
+    width: 16rem;
     max-height: 30vh;
     overflow: auto;
     white-space: nowrap;
     z-index: 2;
-    background: linear-gradient(80.65deg, #133780 5.25%, #2358C1 100.74%);
-    color: white;
+    background: rgba(19, 22, 63);
     cursor: pointer;
-
-    
+    top: 4rem;
+    left: -2.5rem;
+    color: rgba(4, 225, 255);
 }
 
 .menu::-webkit-scrollbar{
