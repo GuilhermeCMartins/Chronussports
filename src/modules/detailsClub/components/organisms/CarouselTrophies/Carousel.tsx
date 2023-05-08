@@ -40,20 +40,23 @@ const CarouselTrophies: React.FC<CarouselProps> = ({ cards }) => {
                     slidesPerView: 2,
                     initialSlide: 2,
                     slidesPerGroup: 1,
-                    spaceBetween: 0
+                    spaceBetween: 10
                 },
                 1100:{
                   slidesPerView: 2,
                   slidesPerGroup: 1,
-                  spaceBetween: 0
+                  spaceBetween: 10
                 },
                 768: {
                     slidesPerView: 1,
                     slidesPerGroup: 1,
+                    spaceBetween: 10
                 },
                 500: {
                     slidesPerView: 1,
                     slidesPerGroup: 1,
+                    spaceBetween: 10
+
                 }
             }}
               centeredSlides={true}

@@ -7,6 +7,10 @@
     
 }
 
+.swiper_container{
+  width: 100%;
+}
+
 .container{
   position: relative;
 }
@@ -35,6 +39,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  width: 100%;
 }
 
 .controllers{
