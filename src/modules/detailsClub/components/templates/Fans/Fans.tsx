@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './styles.module.css'
 import Link from 'next/link';
+import InfoJersey from '../../atoms/InfoJersey/InfoJersey';
 
 interface Props {
     total_fans: number;
@@ -13,13 +14,21 @@ interface FansProps {
     fans: Props;
 }
   
-
 export default function Fans({fans} : FansProps){
     return (
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.container_left}>
                     <Image src={fans.jersey} width={400} height={450} alt='' className={styles.img}></Image>
+                    <div className={styles.hover_info}>
+                        <InfoJersey info={
+                            {master: 'Pado',
+                            secondary: 'RPF',
+                            arm: 'BET77.BET',
+                            shoulder: 'AgroGalaxy'
+                        }
+                        } ></InfoJersey>
+                    </div>
                 </div>
                 <div className={styles.container_right}>
                     <div className={styles.title}>

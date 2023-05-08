@@ -31,6 +31,40 @@
     z-index: -1;
 }
 
+.container_left:hover .hover_info {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+.container_left .img {
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.container_left:hover .img {
+    transform: scale(1.1);
+}
+
+.hover_info {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+  
+.hover_info > * {
+    color: #fff;
+    text-align: center;
+    max-width: 90%;
+}
+
 .container_right{
     display: flex;
     flex-direction: column;

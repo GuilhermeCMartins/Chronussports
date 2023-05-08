@@ -73,8 +73,10 @@ export default function Details(clube: DetailsProps){
                 <div className={styles.brason_container}>
                     <div  className={styles.overall}>
                         <Overall overall={clube.clube.overall}></Overall>    
-                    </div>             
-                    <Image src={clube.clube.src} alt='Brasão' width={408} height={408} className={styles.brason}></Image>
+                    </div>      
+                    <div className={styles.brason}>
+                        <Image src={clube.clube.src} alt='Brasão' fill={true} ></Image>
+                    </div>       
                     <span className={styles.elipses01}></span>
                     <span className={styles.elipses02}></span>
                     <span className={styles.elipses03}></span>
