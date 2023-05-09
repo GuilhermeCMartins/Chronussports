@@ -59,21 +59,24 @@ export default function GraphPerformance({stats}: GraphProps){
 
     return (
         <>
-        <div className={styles.mychart}>
-            <canvas ref={chartRef}  />
-            <div className={styles.inner_donut}>
-              <h3>
-                {stats.games}
-                <p className={styles.jogos}>Jogos</p>
-  
-              </h3> 
-            </div>
-        </div>
-        <div className={styles.stats}>
-            <div className={styles.victories} > <h3>{stats.victories}</h3> <p>Vitórias</p></div>
-            <div className={styles.draws}> <h3>{stats.draws}</h3><p>Empates</p></div>
-            <div className={styles.defeats}> <h3>{stats.defeats}</h3><p>Derrotas</p></div>
+        <section className={styles.section}>
+          <div className={styles.mychart}>
+              <canvas ref={chartRef}  />
+              <div className={styles.inner_donut}>
+                <h3>
+                  {stats.games}
+                  <p className={styles.jogos}>Jogos</p>
+    
+                </h3> 
+              </div>
           </div>
+          <div className={styles.stats}>
+              <div className={styles.victories} > <h3>{stats.victories}</h3> <p>Vitórias</p></div>
+              <div className={styles.draws}> <h3>{stats.draws}</h3><p>Empates</p></div>
+              <div className={styles.defeats}> <h3>{stats.defeats}</h3><p>Derrotas</p></div>
+          </div>
+        </section>
+       
         </>
     )
 }

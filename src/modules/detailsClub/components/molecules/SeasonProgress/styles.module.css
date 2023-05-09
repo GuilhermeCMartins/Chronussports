@@ -43,3 +43,16 @@
     line-height: 117%;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 1000px) {
+    .progress{
+        background: inherit;
+        width: 80%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}

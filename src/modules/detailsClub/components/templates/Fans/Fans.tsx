@@ -19,7 +19,7 @@ export default function Fans({fans} : FansProps){
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.container_left}>
-                    <Image src={fans.jersey} width={400} height={450} alt='' className={styles.img}></Image>
+                    <Image src={fans.jersey} fill={true} alt='' className={styles.img}></Image>
                     <div className={styles.hover_info}>
                         <InfoJersey info={
                             {master: 'Pado',

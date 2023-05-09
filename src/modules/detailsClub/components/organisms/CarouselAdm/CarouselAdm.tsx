@@ -46,18 +46,11 @@ export default function CarouselAdm({ administrators }: CarouselProps) {
   return (
     <section className={styles.section}>
       <Swiper
-        effect={"cube"}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
         navigation={{
           prevEl: `.${styles["custom-swiper-button-prev"]}`,
           nextEl: `.${styles["custom-swiper-button-next"]}`,
         }}
-        modules={[EffectCube, Navigation]}
+        modules={[Navigation]}
         onSlideChange={({ realIndex }) => handleSlideChange(realIndex)}
         className={styles.swiper}
       >

@@ -1,10 +1,9 @@
-
-
 .stats{
     display: flex;
     width: 80%;
     margin-top: 10% ;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .victories , .draws, .defeats{
@@ -84,4 +83,34 @@
     line-height: 116%;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+    .stats{
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .section{
+        display: flex;
+        width: 100%;
+    }
+
+    .stats{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        margin: 0;
+        gap: 1.5rem;
+    }
+
+    .mychart{
+        width: 45%;
+        border: none;
+
+    }
 }

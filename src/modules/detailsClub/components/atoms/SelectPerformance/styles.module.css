@@ -45,3 +45,9 @@
     color: #EEEEEE;
     opacity: 0.41;
 }
+
+@media screen and (max-width: 1000px) {
+    .text_button{
+        font-size: 32px;
+    }
+}

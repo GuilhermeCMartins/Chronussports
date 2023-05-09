@@ -55,11 +55,14 @@ export default function Performance({ performances }: PerformanceProps) {
     <section className={styles.section}>
       <div className={styles.title}>
         <h1>Desempenho na temporada</h1>
-        <SelectYear label="Ano" options={options} onChange={setSelectedYear} selectedValue={selectedYear}/>
+        <div className={styles.dropdown}>
+          <SelectYear label="Ano" options={options} onChange={setSelectedYear} selectedValue={selectedYear}/>
+        </div>
       </div>
       <div className={styles.container}>
         <div className={styles.container_left}>
           <GraphPerformance stats={graph} />
+
         </div>
         <div className={styles.container_right}>
           <SeasonProgress stats={progress} />
