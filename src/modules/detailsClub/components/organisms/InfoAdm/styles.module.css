@@ -5,15 +5,7 @@
     gap: 2.5rem;
 }
 
-.section_info h1 {
-    font-family: 'Outfit';
-    font-weight: 900;
-    font-size: 38px;
-    line-height: 116%;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
+
 
 .container_info {
     display: flex;
@@ -67,4 +59,30 @@
     font-size: 16px;
     line-height: 150%;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 1000px) {
+    .container_info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    
+   .footer{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+   }
+
+   .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+    
 }

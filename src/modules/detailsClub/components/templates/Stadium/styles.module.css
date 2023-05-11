@@ -15,6 +15,12 @@
     text-transform: uppercase;
 }
 
+.header{
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+}
+
 .container{
     display: flex;
     align-items: flex-start;
@@ -22,16 +28,18 @@
 }
 
 .container_image{
-    display: flex;
     position: relative;
-    gap: 4em;
     width: 100%;
-    
 }
 
 .image{
     position: relative;
-    width: fit-content;
+    width: 400px;
+    height: 260px;
+}
+
+.description{
+    width: 50%;
 }
 
 .image::before{
@@ -59,7 +67,7 @@
 
 .container_sub{
     position: absolute;
-    top: 245px;
+    top: 190px;
     left: 0px;
     height: 20%;
     background: rgba(22, 65, 148, 0.2);
@@ -95,4 +103,52 @@
 
 .info thead{
     border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .section{
+        height: 100vh;
+    }
+
+    .container{
+        padding: 1rem 0;
+    }
+    
+    .section h1{
+        font-size: 36px;
+    }
+
+    .container_sub{
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        height: 60%;
+        bottom: 0;
+    }
+
+    .container_image p {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #EEEEEE;
+        height: 35%;
+    }
+    
+}
+@media screen and (max-width: 780px) {
+    .description{
+        width: 65%;
+        height: fit-content;
+    }
+
+    .description p{
+        font-size: 12px;
+    }
+
+    .container_sub{
+        top: 15rem;
+    }
+  
 }

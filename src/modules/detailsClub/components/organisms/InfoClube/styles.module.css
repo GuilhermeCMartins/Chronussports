@@ -48,3 +48,43 @@
     gap: 1rem;
     color: #EEEEEE;
 }
+
+@media screen and (max-width: 1000px) {    
+    .title{
+        display: none;
+    }
+    .container{
+        width: fit-content;
+        position: absolute;
+        bottom: -20rem;
+        left: -8rem;
+    }
+
+    .section{
+        position: relative;
+    }
+}
+
+
+@media screen and (max-width: 780px) {    
+    
+    .description{
+        font-size: 12px;
+    }
+
+    .container{
+        width: fit-content;
+        position: absolute;
+        bottom: -18rem;
+        left: -8rem;
+    }
+
+    .info{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;        
+        color: #FFFFFF;
+    }
+}

@@ -45,3 +45,16 @@
     text-transform: uppercase;
     color: #00E4FF;
 }
+
+
+@media screen and (max-width: 780px) {    
+
+    .button{
+        width: 160px;
+        height: 40px;
+    }
+
+    .text_button{
+        font-size: 32px;
+    }
+}

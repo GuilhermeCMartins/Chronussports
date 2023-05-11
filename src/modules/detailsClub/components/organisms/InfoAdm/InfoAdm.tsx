@@ -4,7 +4,6 @@ import Image from 'next/image'
 export default function InfoAdm(){
     return(
     <section className={styles.section_info}>
-        <h1>ADMINISTRAÇÃO</h1>
         <div className={styles.container_info}>
             <div className={styles.container_info}>
                 <div className={styles.info}>

@@ -28,3 +28,25 @@
     line-height: 150%;
     color: #00E4FF;
 }
+
+@media screen and (max-width: 1000px) {
+    .section{
+        width: 100%;
+        position: absolute;
+        bottom: -5rem;  
+        left: 0rem;
+        z-index: 2;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    
+    .section h1{
+        font-size: 26px;
+    }
+
+    .section h3{
+        font-size: 20px;
+    }
+    
+}

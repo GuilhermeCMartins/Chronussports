@@ -144,25 +144,70 @@
     margin-top: 14px;
 }
 
+.info_mobile, .footer_mobile{
+    display: none;
+}
+
 @media screen and (max-width: 1000px) {
+
+    .section{
+        height: 110vh;
+        margin-top: 5rem;
+    }
+
     .container_left{
-        width: 50%;
+        height: 70vh;
     }
 
-    .container_right{
-        width: 50%;
-    }
-
-    
     .title h1{
-        font-size: 42px;
+        font-size: 36px ;
+    }
+    
+    .info, .footer{
+        display: none;
+    }
+
+   .info_mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:20px;
+        color: white;
+   }
+
+   .footer_mobile{
+        display: block;
+        color: white;
+        margin-top: 12px;
+   }
+
+   .fans h3{
+    font-size: 32px;
+   }
+
+   .fans p{
+    font-size: 16px;
+   }
+
+   .footer_mobile h4{
+    font-family: 'Outfit';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 116%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+   }
+
+}
+
+@media screen and (max-width: 580px) {
+    .title h1{
+        font-size: 16px;
     }
 
     .title p{
-        font-size: 14px;
-    }
-    
-    .info{
-        display: block;
+        font-size: 12px;
     }
 }
+
+

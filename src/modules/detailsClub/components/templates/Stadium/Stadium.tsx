@@ -21,10 +21,19 @@ export default function Stadium({stadium}: StadiumProps){
             <h1>Nossa casa</h1>
             <div className={styles.container}>
                 <div className={styles.container_image}>
-                    <div className={styles.image}>
-                        <Image src={stadium.stadium_image} height={500} width={500} alt='Estádio'></Image>
-                    </div>  
-                    {stadium.stadium_description}
+                    <div className={styles.header}>
+                        <div className={styles.image}>
+                            <Image src={stadium.stadium_image} fill={true} alt='Estádio'></Image>
+                        </div> 
+                        <div className={styles.description}>
+                            <p>
+                            {stadium.stadium_description}
+                            </p> 
+                        </div>
+                        
+                    </div>
+                   
+                    
                     <div className={styles.container_sub}> 
                         <table className={styles.info}>
                             <thead>

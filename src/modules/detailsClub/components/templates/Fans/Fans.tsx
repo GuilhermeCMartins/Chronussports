@@ -36,7 +36,7 @@ export default function Fans({fans} : FansProps){
                         <p>Desde xxx nossa torcida cresce, são mais de xxxx fanáticos Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam augue, placerat sit amet consectetur in, imperdiet quis felis. Aliquam lobortis scelerisque lectus, a fringilla purus. Nulla blandit nisi quis convallis sollicitudin.</p>
                     </div>
                     
-
+                    
                     <div className={styles.info}>
                         <div className={styles.fans}>
                             <h3>{fans.total_fans / 1000}K</h3>
@@ -51,10 +51,8 @@ export default function Fans({fans} : FansProps){
                             <p>Público por jogo</p>
                         </div>
                     </div>
-                    
-
-                    
-                    <div>
+                                        
+                    <div className={styles.footer}>
                         <h4>Faça parte da comunidade!</h4>
                         <div className={styles.links}>
                             <Link href='#'><Image src='/assets/images/clubs/face.svg' height={35} width={35} alt='Facebook'></Image></Link>
@@ -63,8 +61,33 @@ export default function Fans({fans} : FansProps){
                         </div>
                         
                     </div>
-                </div>
+                </div>                
             </div>
+            <div className={styles.info_mobile}>
+                        <div className={styles.fans}>
+                            <h3>{fans.total_fans / 1000}K</h3>
+                            <p>Torcida</p>
+                        </div>
+                        <div className={styles.fans}> 
+                            <h3>{fans.members / 1000}K</h3>
+                            <p>Sócio Torcedores</p>
+                        </div>
+                        <div className={styles.fans}>
+                            <h3>{fans.average / 1000}K</h3>
+                            <p>Público por jogo</p>
+                        </div>
+            </div>
+                                        
+            <div className={styles.footer_mobile}>
+                        <h4>Faça parte da comunidade!</h4>
+                        <div className={styles.links}>
+                            <Link href='#'><Image src='/assets/images/clubs/face.svg' height={35} width={35} alt='Facebook'></Image></Link>
+                            <Link href='#'> <Image src='/assets/images/clubs/insta.svg' height={35} width={35} alt='Instagram'></Image></Link>
+                            <Link href='#'><Image src='/assets/images/clubs/twitter.svg' height={35} width={35} alt='Twitter'></Image></Link>
+                        </div>
+                        
+            </div>
+
         </section>
     )
 }

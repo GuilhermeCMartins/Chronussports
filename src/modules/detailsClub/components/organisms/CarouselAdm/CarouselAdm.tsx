@@ -55,13 +55,13 @@ export default function CarouselAdm({ administrators }: CarouselProps) {
         className={styles.swiper}
       >
         {administrators.map((adm, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className={styles.swiper_slide}>
             {({ isActive }) => (
               <div className={styles.image}>
                 <Image
                   src={adm.image}
-                  width={400}
-                  height={400}
+                  width={300}
+                  height={300}
                   className={isActive ? styles.active : styles.inactive}
                   alt=""
                 ></Image>

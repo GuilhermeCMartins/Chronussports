@@ -71,7 +71,7 @@ export default function Career({career}: CareerProps){
                 </div>                
 
                 <div className={styles.container_info}>
-                    <div className={styles.image}><Image src='/assets/images/clubs/brasao_londrina.svg' width={300} height={300} alt=""></Image></div>
+                    <div className={styles.container_image}><Image src='/assets/images/clubs/brasao_londrina.svg' width={400} height={400} alt=""  className={styles.image}></Image></div>
                     <div className={styles.text}><InfoClube info={info} ></InfoClube></div>
                 </div>
             </div>

@@ -1085,7 +1085,7 @@ const clubes: Clube[] = [
       {
       year: 2023,
       performance: {
-      description: 'Another great season!',
+      description: 'História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.História do título e descrição do elenco.',
       wins: 27,
       losses: 1,
       draws: 2,
