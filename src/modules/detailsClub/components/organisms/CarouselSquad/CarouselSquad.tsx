@@ -80,22 +80,6 @@ export default function CarouselSquad({athlete} : AthleteProps){
                         slidesPerGroup: 1,
                         spaceBetween: 10,
                       },
-                      1600:{
-                        slidesPerView: 7,
-                        slidesPerGroup: 1,
-                        spaceBetween: 10,
-                      },
-                      1450:{
-                          slidesPerView: 7,
-                          slidesPerGroup: 1,
-                          spaceBetween: 10,
-                      },
-                      1100:{
-                        slidesPerView: 7,
-                        slidesPerGroup: 1,
-                        spaceBetween: 10,
-
-                      },
                       768: {
                           slidesPerView: 3,
                           slidesPerGroup: 1,
@@ -103,7 +87,7 @@ export default function CarouselSquad({athlete} : AthleteProps){
 
                       },
                       500: {
-                          slidesPerView: 4,
+                          slidesPerView: 1,
                           slidesPerGroup: 1,
                           spaceBetween: 1,
                       }

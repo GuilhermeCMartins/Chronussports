@@ -4,6 +4,8 @@ import DetailsClub from '@/modules/detailsClub';
 import Header from '@/components/Header';
 import FooterClub from '@/modules/portal/components/footer';
 
+
+
 interface Props {
   clube: Clube;
 }
@@ -13,7 +15,7 @@ import { getAllClubes } from '@/utils/clubes';
 export default function ClubePage({ clube }: Props) {
   return <>
       <Header></Header>
-      <DetailsClub clube={clube}></DetailsClub>
+        <DetailsClub clube={clube}></DetailsClub>
       <FooterClub></FooterClub>
   </>
 }

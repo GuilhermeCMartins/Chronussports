@@ -172,8 +172,8 @@ const Header = () => {
                                 width={142}
                                 height={26}
                                 alt="Logo"
-                                className="lg:mr-[32px] " />
-                </div>
+                                className="lg:mr-[32px]  " />
+                        </div>
                 
 
                     <div className="flex">
