@@ -29,10 +29,10 @@
         width: 100vw;
         justify-content: flex-start;
         margin-left: 12rem;
-        gap: 0rem;
+        gap: 13rem;
         box-sizing: border-box;
         position: relative;
-        height: 50vh;
+        height: 100vh;
     }
     
     .squad{

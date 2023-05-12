@@ -124,20 +124,28 @@ transform: translateY(-50%);
 @media screen and (max-width: 580px) {
   .section{
     margin-left: 12rem;
-    height: 40vh;
+    margin-top: 12rem;
   }
 
   .swiper_container{
-    width: 50%;
+    width: 40%;
+    height: 90vh;
   }
 
-  .swiper_slider{
-    width: 50%;
+  .swiper_slide{
+    margin-top: 14rem;
+    width: 40%;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   .container{
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
+
   }
 
   .container::before{
@@ -152,8 +160,8 @@ transform: translateY(-50%);
   }
 
   .container_image{
-    width: 150px;
-    height: 150px;   
+    width: 120px;
+    height: 120px;   
   }
 
   .controllers{
@@ -163,7 +171,7 @@ transform: translateY(-50%);
   .info_name{
     width: 10rem;
     position: absolute;
-    top: 1rem;
+    top: 9rem;
     right: -3rem;
   }
 
