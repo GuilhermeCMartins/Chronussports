@@ -39,3 +39,26 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 580px) {
+    .section{
+        width: 260px;
+        height: 120px;
+        top: 7rem;
+        right: -4rem;
+
+        box-sizing: border-box;
+    }
+    .section h3{
+        font-size: 12px;
+        text-align: center;
+
+        padding: 8px 0 0 0 ;
+    }
+
+    .circular_progress{
+        gap: 4px;
+    }
+
+  }
+  

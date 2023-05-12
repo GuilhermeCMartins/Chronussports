@@ -82,7 +82,7 @@
 }
 
 .slider { 
-width: 79vw;
+  width: 79vw;
 }
 
 .swiper_container {
@@ -101,6 +101,11 @@ width: 79vw;
   
 }
 
+.container_image{
+  width: 200px;
+  height: 200px;   
+}
+
 .custom-swiper-button-prev,
 .custom-swiper-button-next {
 color: #fff;
@@ -114,3 +119,40 @@ line-height: 1;
 display: block;
 transform: translateY(-50%);
 }
+
+
+@media screen and (max-width: 580px) {
+  .section{
+    height: 70vh;
+    
+  }
+  .container{
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    border: 2px solid white;
+  }
+
+  .container_image{
+    width: 150px;
+    height: 150px;   
+  }
+
+  .info_name{
+    width: 31rem;
+    position: absolute;
+    top: 3rem;
+    right: -22rem;
+  }
+
+  .info_name h1{
+    font-size: 14px;
+  }
+
+  .info_name h3{
+    font-size: 12px;
+  }
+  
+}
+

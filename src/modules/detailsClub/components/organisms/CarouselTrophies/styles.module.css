@@ -68,3 +68,19 @@
   display: block;
   transform: translateY(-50%);
 }
+
+@media screen and (max-width: 580px) {
+  .swiper_container{
+   width: 100%;
+   margin: 0 auto;
+  }
+
+  .controllers{
+    display: none;
+  }
+
+  .container h1{
+    font-size: 16px;
+  }
+
+}

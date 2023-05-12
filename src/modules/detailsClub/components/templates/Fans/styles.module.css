@@ -208,6 +208,36 @@
     .title p{
         font-size: 12px;
     }
+
+    .info_mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:20px;
+        color: white;
+   }
+
+   .footer_mobile{
+        display: block;
+        color: white;
+        margin-top: 12px;
+   }
+
+   .fans h3{
+    font-size: 21px;
+   }
+
+   .fans p{
+    font-size: 12px;
+   }
+
+   .footer_mobile h4{
+    font-size: 12px;
+   }
+
+   .container_left::before {
+    box-shadow: 0px 0px 80px 80px rgba(7, 116, 156, .5);
+}
 }
 
 

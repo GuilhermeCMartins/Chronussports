@@ -103,9 +103,9 @@ export default function CarouselSquad({athlete} : AthleteProps){
 
                       },
                       500: {
-                          slidesPerView: 3,
+                          slidesPerView: 4,
                           slidesPerGroup: 1,
-                          spaceBetween: 10,
+                          spaceBetween: 1,
                       }
                   }}
                     centeredSlides={true}
@@ -126,8 +126,7 @@ export default function CarouselSquad({athlete} : AthleteProps){
                         <div className={styles.container_image}>
                           <Image
                             src={ath.carousel_img}
-                            width={200}
-                            height={200}
+                            fill={true}
                             alt=""
                             className={`${isActive ? styles.active : ''}`}
                           />

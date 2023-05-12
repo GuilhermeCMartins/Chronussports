@@ -88,3 +88,17 @@
         color: #FFFFFF;
     }
 }
+
+@media screen and (max-width: 580px) {    
+    .container{
+        width: 100%;
+        bottom: -20rem;
+        left: -5rem;
+        gap: 3rem;
+    }
+
+    .info{
+        text-align: left;
+    }
+
+}

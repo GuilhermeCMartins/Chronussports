@@ -955,7 +955,7 @@ const clubes: Clube[] = [
       field_size: 100,
       lawn_type: 100,
       own_stadium: true,
-      stadium_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet congue nisl, eget fringilla erat. Duis posuere semper leo sed dapibus. Suspendisse massa urna, laoreet suscipit risus id, malesuada pulvinar justo. In mattis rhoncus cursus. Ut porta pharetra commodo. Sed maximus eros at aliquam luctus.",
+      stadium_description: "O Londrina Esporte Clube é um clube de futebol localizado na cidade de Londrina, no norte do estado brasileiro do Paraná. É um dos principais clubes do estado, tendo sido fundado em 5 de abril de 1956.",
       stadium_image: '/assets/images/clubs/etihad-9.jpg.svg',
     },
     trophies: [{

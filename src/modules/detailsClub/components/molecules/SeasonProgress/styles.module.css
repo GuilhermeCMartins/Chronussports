@@ -56,3 +56,25 @@
         gap: 24px;
     }
 }
+
+@media screen and (max-width: 580px) {
+    .progress{
+        height: fit-content;
+        padding: 16px;
+        width: 100%;
+    }
+
+    .progress h2{
+        font-size: 21px;
+        text-align: center;
+    }
+
+    
+    .goals h3 {
+        font-size: 32px;
+    }
+
+    .goals p{
+        font-size: 12px;
+    }
+}

@@ -14,7 +14,6 @@
 
 .inner_donut h3{
     font-family: 'Inter';
-    font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 150%;
@@ -36,3 +35,26 @@
     width: 100px;
     height: 100px;
 }
+
+
+@media screen and (max-width: 580px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 60px;
+    }
+
+    .chartCanvas {
+        position: relative;
+        width: 62px;
+        height: 62px;
+    }
+
+    .inner_donut{
+        top: 1rem;
+        right: 1rem;
+    }
+}
+  

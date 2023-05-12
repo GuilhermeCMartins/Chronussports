@@ -41,6 +41,11 @@ display: block;
 transform: translateY(-50%);
 }
 
+.image{
+    width: 300px;
+    height: 300px;
+}
+
 
 @media screen and (max-width: 1000px) {
   .controllers{
@@ -59,3 +64,14 @@ transform: translateY(-50%);
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 580px) {
+
+  .swiper_slide{
+    width: 100%;
+  }
+  .controllers{
+    display: none;
+  }
+}
+

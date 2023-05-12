@@ -18,7 +18,7 @@ export default function InfoAdm(){
                 </div>
                 <div className={styles.info}>
                     <div>
-                        <h2>ESTádio do café</h2>
+                        <h2>Estádio do café</h2>
                         <h3>Estádio</h3>
                     </div>
                     <div>

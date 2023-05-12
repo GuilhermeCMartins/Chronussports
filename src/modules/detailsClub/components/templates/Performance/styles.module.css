@@ -95,3 +95,27 @@
     
 }
 
+@media screen and (max-width: 580px) {
+
+    .title{
+        margin: 1.5rem 0;
+    }
+
+    .container_left{
+        height: 45%;
+    }
+
+    .container_right{
+        height: 50%;
+    }
+
+    .section{
+        height: 125vh;
+    }
+
+    .title h1{
+        font-size: 21px;
+    }
+    
+}
+

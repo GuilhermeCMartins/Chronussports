@@ -60,8 +60,7 @@ export default function CarouselAdm({ administrators }: CarouselProps) {
               <div className={styles.image}>
                 <Image
                   src={adm.image}
-                  width={300}
-                  height={300}
+                  fill={true}
                   className={isActive ? styles.active : styles.inactive}
                   alt=""
                 ></Image>

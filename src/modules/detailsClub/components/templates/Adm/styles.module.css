@@ -82,3 +82,14 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 580px) {
+    .sectionAdm {
+      height: 110vh;
+    }
+
+   .title_mobile{
+        font-size: 16px;
+   }
+}
+

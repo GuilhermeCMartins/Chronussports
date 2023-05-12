@@ -50,3 +50,21 @@
     }
     
 }
+
+@media screen and (max-width: 1000px) {   
+    .section h1{
+        font-size: 14px;
+    }
+
+    .section h3{
+        font-size: 12px;
+    }
+    .section{
+        width: 100%;
+        bottom: 0rem;  
+        left: 0rem;
+        z-index: 2;
+    }
+    
+}
+

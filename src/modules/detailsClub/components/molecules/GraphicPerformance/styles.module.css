@@ -113,11 +113,42 @@
         border: none;
 
     }
-}
 
-@media screen and (max-width: 1000px) {
     .inner_donut h3{
         font-size: 36px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .section{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .victories h3, .defeats h3, .draws h3{
+        font-size: 21px;
+    }
+
+    .victories p, .defeats p, .draws p{
+        font-size: 12px;
+    }
+    
+    
+    .mychart{
+        width: 75%;
+        border: none;
+
+    }
+
+    .stats{
+        width: 25%;
+    }
+
+    .inner_donut h3{
+        font-size: 32px;
         text-align: center;
     }
 }

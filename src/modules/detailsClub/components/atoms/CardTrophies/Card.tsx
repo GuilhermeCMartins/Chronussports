@@ -13,7 +13,7 @@ export default function Card(card: Props){
     <section className={styles.container}>
             <div className={styles.card}>
                 <div className={styles.image}>
-                    <Image src={card.trophies_photo} width={200} height={200} alt='Troféu'></Image>
+                    <Image src={card.trophies_photo} fill={true} alt='Troféu'></Image>
                 </div>
                 <div className={styles.info}>
                     <h3>{card.quantity_trophies}</h3>
