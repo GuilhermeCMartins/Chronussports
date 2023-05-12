@@ -53,8 +53,12 @@
     }
 
     .inner_donut{
-        top: 1rem;
+        top: 0.75rem;
         right: 1rem;
+    }
+
+    .inner_donut h3{
+        font-size: 10px;
     }
 }
   
