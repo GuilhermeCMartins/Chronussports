@@ -126,6 +126,11 @@ transform: translateY(-50%);
     height: 70vh;
     
   }
+  .container{
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   .container_image{
     width: 150px;

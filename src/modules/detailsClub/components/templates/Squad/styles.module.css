@@ -20,11 +20,17 @@
     background-image: url('/assets/images/clubs/Squad/bg_linhas.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     height: 140vh;
 }
 
 @media screen and (max-width: 580px) {
+    .squad{
+        height: 100vh;
+        background-position: top;
+        background-size: cover;
+    }
+
     .title{
         font-size: 16px;
     }

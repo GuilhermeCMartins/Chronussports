@@ -83,4 +83,8 @@
     font-size: 16px;
   }
 
+  .container::before{
+    box-shadow: 0px 0px 180px 200px rgba(7, 116, 156, .4);
+  }
+
 }
