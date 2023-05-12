@@ -19,7 +19,7 @@ interface AthleteProps {
 
 export default function Squad({athlete}: AthleteProps){
     return (
-        <div className={styles.container}>   
+        <section className={styles.section}>   
             <div className={styles.title}>
                <h1>Elenco temporada 23</h1>
             </div>         
@@ -27,6 +27,6 @@ export default function Squad({athlete}: AthleteProps){
             <section className={styles.squad}>
                 <CarouselSquad athlete={athlete}></CarouselSquad> 
             </section>
-        </div>
+        </section>
     )
 }

@@ -155,8 +155,13 @@
 }
 
 @media screen and (max-width: 580px) {
-    .section {
-        width: 100%;
+    .section{
+        width: 160vw;
+        margin-left: 2.5rem;
+    }
+
+    .image::after{
+        width: 0%;
     }
 
     .section h1{
@@ -177,7 +182,7 @@
     }
     
     .container_sub{
-        height: 80%;
+        height: 100%;
         top: 13rem;
     }
 

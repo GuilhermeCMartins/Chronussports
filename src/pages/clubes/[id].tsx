@@ -13,11 +13,14 @@ interface Props {
 import { getAllClubes } from '@/utils/clubes';
 
 export default function ClubePage({ clube }: Props) {
-  return <>
+  return (
+    <>
       <Header></Header>
-        <DetailsClub clube={clube}></DetailsClub>
+      <DetailsClub clube={clube}></DetailsClub>
       <FooterClub></FooterClub>
-  </>
+    </>
+       
+  )
 }
 
 

@@ -86,9 +86,13 @@
 @media screen and (max-width: 580px) {
     .sectionAdm {
       height: 110vh;
+      width: 160vw;
+      margin-left: 2.5rem;
     }
 
    .title_mobile{
+        width: 180vw;
+        text-align: center;
         font-size: 16px;
    }
 }

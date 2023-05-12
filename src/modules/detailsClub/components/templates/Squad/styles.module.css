@@ -1,4 +1,4 @@
-.container{
+.section{
     display: flex;
     flex-direction: column;
     gap: 8rem;
@@ -24,11 +24,24 @@
     height: 140vh;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 580px) {  
+    .section{
+        width: 100vw;
+        justify-content: flex-start;
+        margin-left: 12rem;
+        gap: 0rem;
+        box-sizing: border-box;
+        position: relative;
+        height: 50vh;
+    }
+    
     .squad{
-        height: 100vh;
-        background-position: top;
-        background-size: cover;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        left: -10rem;
     }
 
     .title{

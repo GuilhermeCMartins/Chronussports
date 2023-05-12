@@ -80,6 +80,11 @@ export default function CarouselSquad({athlete} : AthleteProps){
                         slidesPerGroup: 1,
                         spaceBetween: 10,
                       },
+                      1100:{
+                        slidesPerView: 7,
+                        slidesPerGroup: 1,
+                        spaceBetween: 5,
+                      },
                       768: {
                           slidesPerView: 3,
                           slidesPerGroup: 1,
@@ -87,7 +92,7 @@ export default function CarouselSquad({athlete} : AthleteProps){
 
                       },
                       500: {
-                          slidesPerView: 1,
+                          slidesPerView: 3,
                           slidesPerGroup: 1,
                           spaceBetween: 1,
                       }
@@ -105,7 +110,7 @@ export default function CarouselSquad({athlete} : AthleteProps){
                 >
                   
                   {athlete.map((ath, index) => (
-                    <SwiperSlide key={ath.id}>
+                    <SwiperSlide key={ath.id} className={styles.swiper_slide}>
                       {({ isActive }) => (
                         <div className={styles.container_image}>
                           <Image

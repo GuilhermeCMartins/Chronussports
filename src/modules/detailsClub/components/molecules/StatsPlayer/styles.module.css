@@ -44,8 +44,8 @@
     .section{
         width: 260px;
         height: 120px;
-        top: 7rem;
-        right: -4rem;
+        top: 4rem;
+        right: -8rem;
 
         box-sizing: border-box;
     }

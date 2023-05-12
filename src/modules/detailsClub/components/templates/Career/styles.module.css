@@ -97,6 +97,12 @@
 }
 
 @media screen and (max-width: 580px) {    
+    .section{
+        width: 160vw;
+        margin-left: 2.5rem;
+        margin-top: 15rem;
+    }
+    
     .section h1{
         font-size: 21px;
     }

@@ -53,6 +53,9 @@ export default function CarouselAdm({ administrators }: CarouselProps) {
         modules={[Navigation]}
         onSlideChange={({ realIndex }) => handleSlideChange(realIndex)}
         className={styles.swiper}
+        centeredSlides={true}
+        slidesPerView={1}
+        slidesPerGroup={1}
       >
         {administrators.map((adm, index) => (
           <SwiperSlide key={index} className={styles.swiper_slide}>
@@ -61,7 +64,6 @@ export default function CarouselAdm({ administrators }: CarouselProps) {
                 <Image
                   src={adm.image}
                   fill={true}
-                  className={isActive ? styles.active : styles.inactive}
                   alt=""
                 ></Image>
               </div>
