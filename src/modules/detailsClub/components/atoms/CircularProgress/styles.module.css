@@ -43,18 +43,19 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        height: 60px;
+        height: 20px;
+        margin-top: 1.6rem;
     }
 
     .chartCanvas {
         position: relative;
-        width: 62px;
-        height: 62px;
+        width: 55px;
+        height: 55px;
     }
 
     .inner_donut{
-        top: .95rem;
-        right: 1rem;
+        top: .8rem;
+        right: 1.1rem;
     }
 
     .inner_donut h3{

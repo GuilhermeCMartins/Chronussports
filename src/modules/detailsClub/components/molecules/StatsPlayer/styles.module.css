@@ -42,22 +42,22 @@
 
 @media screen and (max-width: 580px) {
     .section{
-        width: 260px;
-        height: 120px;
+        width: 220px;
+        height: 110px;
         top: 12rem;
         right: -8rem;
 
         box-sizing: border-box;
     }
     .section h3{
-        font-size: 12px;
+        font-size: 8px;
         text-align: center;
 
         padding: 8px 0 0 0 ;
     }
 
     .circular_progress{
-        gap: 4px;
+        gap: 0;
     }
 
   }
